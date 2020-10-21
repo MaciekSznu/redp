@@ -1,0 +1,30 @@
+<svg width="136" height="121" viewBox="0 0 136 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M50.5236 92.7042C50.5236 102.848 42.4572 111.024 32.5645 111.024C22.6718 111.024 14.6055 102.848 14.6055 92.7042C14.6055 82.5606 22.6718 74.3848 32.5645 74.3848C42.4572 74.3848 50.5236 82.5606 50.5236 92.7042Z"
+    stroke="#364859" stroke-width="3" />
+  <circle cx="101.201" cy="91.2237" r="17.9591" stroke="#364859" stroke-width="3" />
+  <path
+    d="M66.1446 60.9398C66.1632 60.9402 66.1817 60.9403 66.2002 60.94L90.3983 60.5742L66.8397 92.2008H32.5169L48.3429 60.5488L66.1446 60.9398Z"
+    stroke="#364859" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M42.8242 52.3643H48.1312M53.4383 52.3643H48.1312M48.1312 52.3643V60.1479" stroke="#364859" stroke-width="3"
+    stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M92.3562 60.0892V48.4137C90.8231 46.055 86.5539 42.7529 81.7422 48.4137" stroke="#364859" stroke-width="3"
+    stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M70.7738 82.3789H67.2357L56.9755 103.961H53.4375" stroke="#364859" stroke-width="3" stroke-linecap="round"
+    stroke-linejoin="round" />
+  <circle r="4.86842" transform="matrix(-1 0 0 1 64.0535 93.7005)" fill="white" stroke="#364859" stroke-width="3" />
+  <path d="M92.3555 60.502L102.616 92.3441" stroke="#364859" stroke-width="3" stroke-linecap="round"
+    stroke-linejoin="round" />
+  <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="136" height="121">
+    <rect width="135.86" height="121" fill="#C4C4C4" />
+  </mask>
+  <g mask="url(#mask0)">
+    <mask id="path-10-inside-1" fill="white">
+      <path
+        d="M46.7001 112.509C46.7001 107.212 45.6843 101.968 43.7107 97.0742C41.7371 92.1807 38.8444 87.7344 35.1976 83.9891C31.5509 80.2438 27.2216 77.2729 22.4569 75.246C17.6922 73.219 12.5854 72.1758 7.42818 72.1758V112.509H46.7001Z" />
+    </mask>
+    <path
+      d="M46.7001 112.509C46.7001 107.212 45.6843 101.968 43.7107 97.0742C41.7371 92.1807 38.8444 87.7344 35.1976 83.9891C31.5509 80.2438 27.2216 77.2729 22.4569 75.246C17.6922 73.219 12.5854 72.1758 7.42818 72.1758V112.509H46.7001Z"
+      fill="white" stroke="#56928A" stroke-width="6" mask="url(#path-10-inside-1)" />
+  </g>
+</svg>

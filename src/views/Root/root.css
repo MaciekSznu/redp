@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  overflow: hidden;
+  /* background: #aa9595; */
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr 1042px 1fr;
+  grid-template-rows: 60px 900px auto auto auto auto auto auto auto auto 40px;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". menu ."
+    ". hero ."
+    ". investment ."
+    ". schedule ."
+    ". slider ."
+    ". investor ."
+    ". flats ."
+    ". localization ."
+    ". contact ."
+    ". footer ."
+    ". copyrights .";
+  overflow: hidden;
+}
+.hero { grid-area: hero; }
+.investment { grid-area: investment; }
+.schedule { grid-area: schedule; }
+.slider { grid-area: slider; }
+.investor { grid-area: investor; }
+.flats { grid-area: flats; }
+.localization { grid-area: localization; }
+.contact { grid-area: contact; }
+.footer { grid-area: footer; }
+.copyrights { grid-area: copyrights; }

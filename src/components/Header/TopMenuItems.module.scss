@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+.topMenuItem {
+  display: block;
+  height: 26px;
+  margin: 20px 0;
+  cursor: pointer;
+  text-align: center;
+  color: $base-dark;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: .05em;
+  font-weight: 700;
+  font-family: $base-font;
+}
+
+.topMenuItemActive {
+  // min-width: 125px;
+  // cursor: pointer;
+  // color: $color-5;
+  // font-weight: 700;
+  // border-bottom: 1px solid $color-5;
+  background: rgba($white, .2);
+}
+
+@media (min-width: 768px) {
+
+  .topMenuItem {
+    height: 28px;
+    line-height: 23px;
+    font-size: 16px;
+    margin: 16px 32px;
+    color: $base-green;
+  }
+}

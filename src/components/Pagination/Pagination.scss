@@ -1,0 +1,55 @@
+@import '../../variables.scss';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    font-size: 1rem;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    margin: .5rem 0 0;
+    padding: 0;
+
+    &__item {
+      display: block;
+      width:  1.5rem;
+      height:  1.5rem;
+      line-height: 1.5rem;
+      padding-top: .1rem;
+      margin: .3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: .2s;
+      background-color: $color-4;
+      color: $footer-text-color;
+      border-radius: .2rem;
+
+      &:hover {
+        background-color: $color-5;
+      }
+
+      &--active {
+        background-color: $color-6;
+
+      }
+    }
+  @media (min-width: 768px) {
+      font-size: 1.4rem;
+      margin: .8rem 0 0;
+  
+      &__item {
+        width:  2.4rem;
+        height:  2.4rem;
+        margin: .4rem;
+        padding-top: .4rem;
+      }
+    }
+  }
+}

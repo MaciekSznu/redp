@@ -1,0 +1,275 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.InvestmentContainer {
+  grid-area: investment;
+  background-color: $white;
+
+  .InvestmentTitle {
+    font-size: 56px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $base-dark;
+    font-weight: 700;
+    letter-spacing: $big-letter-spacing;
+  }
+
+  .InvestmentSubTitle {
+    font-size: 40px;
+    text-align: center;
+    color: $base-dark;
+    font-weight: 500;
+    letter-spacing: $big-letter-spacing;
+  }
+
+  .InvestmentParagraph {
+    font-size: 24px;
+    color: $base-dark;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: $medium-letter-spacing;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .InvestmentIconsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "first second third";
+
+    .IconsWrapper {
+      margin: 48px 0;
+      grid-area: first;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .IconTitle {
+        margin-top: 48px;
+        font-size: 20px;
+        color: $base-green;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: $medium-letter-spacing;
+      }
+
+      .IconSubTitle {
+        margin-top: 0;
+        font-size: 20px;
+        color: $base-dark;
+        font-weight: 500;
+        letter-spacing: $small-letter-spacing;
+      }
+
+      &:nth-of-type(2) {
+        grid-area: second;
+      }
+
+      &:nth-of-type(3) {
+        grid-area: third;
+      }
+    }
+  }
+
+  .InvestmentSectionTitle {
+    font-size: 24px;
+    text-align: center;
+    color: $base-dark;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: $big-letter-spacing;
+  }
+
+  .InvestmentIconsFullWidthContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "first second third";
+    background: $base-grey;
+
+    .IconWrapper {
+      margin: 48px 0;
+      grid-area: first;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .Icon {
+        position: relative;
+
+        .IconImage {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          padding-bottom: 9px;
+          z-index: 2;
+        }
+      }
+
+      .IconTitle {
+        margin-top: 48px;
+        font-size: 20px;
+        color: $base-green;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: $medium-letter-spacing;
+      }
+
+      .IconSubTitle {
+        margin-top: 0;
+        font-size: 20px;
+        color: $base-dark;
+        font-weight: 500;
+        letter-spacing: $small-letter-spacing;
+      }
+
+      &:nth-of-type(2) {
+        grid-area: second;
+      }
+
+      &:nth-of-type(3) {
+        grid-area: third;
+      }
+    }
+  }
+
+  .InvestmentIconsContainerSecondary {
+    @extend .InvestmentIconsContainer;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "first second third"
+      "fourth fifth sixth";
+
+    .IconsWrapper {
+      margin: 48px 0;
+      grid-area: first;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+
+      .IconTitle {
+        margin-top: 48px;
+        font-size: 20px;
+        color: $base-dark;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: $small-letter-spacing;
+      }
+
+      &:nth-of-type(2) {
+        grid-area: second;
+      }
+
+      &:nth-of-type(3) {
+        grid-area: third;
+      }
+
+      &:nth-of-type(4) {
+        grid-area: fourth;
+      }
+
+      &:nth-of-type(5) {
+        grid-area: fifth;
+      }
+
+      &:nth-of-type(6) {
+        grid-area: sixth;
+      }
+    }
+  }
+
+  .ScheduleIconsContainer {
+    @extend .InvestmentIconsContainer;
+    .IconsWrapper {
+      .IconTitle {
+        width: 100%;
+        text-align: left;
+        color: $base-dark;
+        font-weight: 600;
+      }
+      .IconSubTitle {
+        width: 100%;
+        text-align: left;
+      }
+      .HexagonWrapper {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        .Icon {
+          z-index: 2;
+          path {
+            stroke: $base-green;
+          }
+          circle {
+            fill: $base-green;
+          }
+
+        }
+      }
+      .HexagonWrapper::before {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 100%;
+        border-top: 3px solid $base-dark;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-of-type(2) {
+        .IconTitle, .IconSubTitle {
+          width: initial;
+        }
+        .HexagonWrapper {
+          .Icon {
+            path {
+              stroke: $base-dark;
+            }
+            circle {
+              fill: $base-dark;
+            }
+          }
+
+          &::before {
+            border-top: 3px solid $base-dark;
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        .IconTitle, .IconSubTitle {
+          text-align: right;
+        }
+        .HexagonWrapper {
+          .Icon {
+            path {
+              stroke: $base-dark;
+            }
+            circle {
+              fill: $base-dark;
+            }
+          }
+
+          &::before {
+            border-top: 3px dashed $base-dark;
+          }
+        }
+      }
+    }
+  }
+
+  .ScheduleButton {
+    @include button-secondary;
+  }
+}

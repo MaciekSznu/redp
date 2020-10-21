@@ -1,0 +1,26 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.heroImageContainer {
+  position: relative;
+  grid-area: hero;
+  background-color: $white;
+
+  .heroImageText {
+    position: absolute;
+    top: 102px;
+    left: 122px;
+    color: $base-green;
+  }
+
+  .heroButton {
+    @include button-primary;
+    position: absolute;
+    top: 200px;
+    left: 122px;
+
+    &:hover {
+      @include button-secondary;
+    }
+  }
+}
