@@ -7,15 +7,13 @@
   background-color: $white;
   display: grid;
   grid-template-columns: 1fr 1042px 1fr;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
     ". title ."
     ". subtitle ."
     ". view ."
-    ". view-description ."
-    ". subtitle-filters ."
-    ". filters .";
+    ". view-description .";
 
   .ContentWrapperTop {
     grid-area: title;
@@ -121,17 +119,6 @@
         letter-spacing: $small-letter-spacing;
         align-self: end;
       }
-    }
-  }
-
-  .FiltersTitleWrapper {
-    @extend .GraphicSearchTitleWrapper;
-    margin-top: 100px;
-
-    grid-area: subtitle-filters;
-
-    .FiltersTitle {
-      @extend .GraphicSearchTitle;
     }
   }
 }

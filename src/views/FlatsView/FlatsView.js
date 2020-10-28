@@ -2,8 +2,6 @@ import React from "react";
 import styles from "./FlatsView.module.scss";
 import { ReactComponent as HexagonStatus } from "../../assets/helpers/hexagon-status.svg";
 import GraphicSearch from "../../components/GraphicSearch/GraphicSearch";
-import RangeSearchInputs from "../../components/SearchInputs/RangeSearchInputs";
-import SearchResultsTable from "../../components/SearchResults/SearchResultsTable";
 
 const FlatsView = () => {
   return (
@@ -37,11 +35,6 @@ const FlatsView = () => {
             <p className={styles.Status}>sprzedane</p>
           </div>
         </div>
-        <div className={styles.FiltersTitleWrapper}>
-          <h3 className={styles.FiltersTitle}>filtruj mieszkania</h3>
-        </div>
-        <RangeSearchInputs />
-        <SearchResultsTable />
       </div>
     </>
   );

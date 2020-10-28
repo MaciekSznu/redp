@@ -1,0 +1,131 @@
+@import "../../../variables.scss";
+
+.input-range__slider {
+  appearance: none;
+  position: relative;
+  background: $base-green;
+  // border: 1px solid $color-4;
+  border-radius: 100%;
+  cursor: pointer;
+  display: block;
+  height: 10px;
+  width: 10px;
+  margin-left: -5px;
+  margin-top: -7px;
+  outline: none;
+  // position: absolute;
+  // top: 50%;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    background: $white;
+    border: 2px solid $base-green;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    background: $base-green;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  &:active {
+    transform: scale(1.2);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 5px rgba(63, 81, 181, 0.2);
+  }
+
+  &-container {
+    transition: left 0.3s ease-out;
+  }
+}
+
+.input-range__label {
+  color: $base-dark;
+  font-family: $base-font;
+  font-size: 14px;
+  font-weight: 400;
+  transform: translateZ(0);
+  white-space: nowrap;
+
+  &--min,
+  &--max {
+    bottom: -1.4rem;
+    position: absolute;
+    display: none;
+  }
+
+  &--value {
+    position: absolute;
+    bottom: 26px;
+    // right: 10px;
+    left: 10px;
+  }
+
+  &-container {
+    position: relative;
+  }
+}
+
+.input-range__track {
+  background: #eeeeee;
+  border-radius: 1px;
+  cursor: pointer;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: left 0.3s ease-out, width 0.3s ease-out;
+
+  &--background {
+    left: 0;
+    margin-top: -0.1rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+
+  &--active {
+    background: $base-green;
+  }
+
+  & > .input-range__slider-container ~ .input-range__slider-container {
+    position: relative;
+    .input-range__label {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+.input-range {
+  grid-area: slider;
+  height: auto;
+  position: relative;
+  width: 100%;
+
+  &--disabled .input-range__track {
+    background: #eeeeee;
+  }
+
+  &--disabled .input-range__slider {
+    background: #cccccc;
+    border: 1px solid #cccccc;
+    box-shadow: none;
+    transform: none;
+  }
+}

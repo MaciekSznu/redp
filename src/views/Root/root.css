@@ -29,7 +29,7 @@ body {
 #root {
   display: grid;
   grid-template-columns: 1fr 1042px 1fr;
-  grid-template-rows: 60px 900px auto auto auto auto auto auto auto auto;
+  grid-template-rows: 60px 900px auto auto auto auto auto auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
     ". menu ."
@@ -39,6 +39,7 @@ body {
     "slider slider slider"
     "investor investor investor"
     "flats flats flats"
+    ". filters ."
     "localization localization localization"
     ". contact ."
     "footer footer footer";

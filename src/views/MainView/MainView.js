@@ -8,7 +8,7 @@ import CompanyView from "../CompanyView/CompanyView";
 import ContactView from "../ContactView/ContactView";
 import SliderView from '../SliderView/SliderView';
 import FooterView from "../FooterView/FooterView";
-
+import FiltersView from "../FiltersView/FiltersView";
 
 const MainView = () => (
   <>
@@ -17,8 +17,8 @@ const MainView = () => (
     <InvestmentView />
     <SliderView />
     <CompanyView />
-
     <FlatsView />
+    <FiltersView />
     <LocationView />
     <ContactView />
     <FooterView />

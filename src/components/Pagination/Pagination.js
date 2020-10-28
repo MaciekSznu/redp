@@ -41,8 +41,8 @@ class Pagination extends React.Component {
         <ul className="pagination__list">
 
           {presentPage > 1 && (
-              <li className={`pagination__list__item${(true) ? ' pagination__list__item' : '' }`} onClick={this.changePageDown}>
-                {'<'}
+              <li className={`pagination__list__item${(true) ? ' pagination__list__item--first' : '' }`} onClick={this.changePageDown}>
+                {''}
               </li>
           )}
 
@@ -56,8 +56,8 @@ class Pagination extends React.Component {
           )}
 
           {presentPage < pages && (
-            <li className={`pagination__list__item${(true) ? ' pagination__list__item' : '' }`} onClick={this.changePageUp}>
-              {'>'}
+            <li className={`pagination__list__item${(true) ? ' pagination__list__item--last' : '' }`} onClick={this.changePageUp}>
+              {''}
             </li>
           )}
 

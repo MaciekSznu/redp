@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.FiltersViewWrapper {
+  @include sectionWrapper;
+  grid-area: filters;
+
+  .FiltersTitleWrapper {
+    border-bottom: 4px solid $dark-grey;
+    border-radius: 4px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 4px;
+      width: 208px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $base-green;
+      border-radius: 4px;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      bottom: -40px;
+      width: 0;
+      height: 0;
+      transform: translateX(-50%);
+      border-style: solid;
+      border-width: 40px 75px 0 75px;
+      border-color: $base-green transparent transparent transparent;
+    }
+
+    .FiltersTitle {
+      @include section-sub-title;
+      margin-top: 100px;
+    }
+  }
+
+  .FiltersWrapper {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

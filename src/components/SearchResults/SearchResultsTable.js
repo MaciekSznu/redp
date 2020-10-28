@@ -1,7 +1,7 @@
 import React from 'react';
 import flatsArray from '../../assets/flatsArray';
 import { minFloorValue, maxFloorValue, minAreaValue, maxAreaValue, minRoomsValue, maxRoomsValue, minPriceValue, maxPriceValue } from '../Ranges/RangesData';
-// import Pagination from '../Pagination/Pagination';
+import Pagination from '../Pagination/Pagination';
 import styles from './SearchResults.module.scss';
 
 class SearchResultsTable extends React.Component {
@@ -106,7 +106,7 @@ class SearchResultsTable extends React.Component {
 
     return (
       <>
-        <h2 className={styles.searchResultHeader}>Wybrane dla Ciebie</h2>
+
         <div className={styles.searchResultsTableWrapper}>
           <table className={styles.searchResultTable}>
             <tbody>
@@ -115,7 +115,7 @@ class SearchResultsTable extends React.Component {
             </tbody>
           </table>
         </div>
-        {/* <Pagination pages={pages} onPageChange={(page) => {this.setState({page: page})}} /> */}
+        <Pagination pages={pages} onPageChange={(page) => {this.setState({page: page})}} />
       </>
     )
   }
