@@ -1,0 +1,86 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+// .SliderLeftContainer {
+//   grid-area: slider-left;
+//   width: 100%;
+//   min-width: 162px;
+// }
+
+// .SliderRightContainer {
+//   grid-area: slider-right;
+//   width: 100%;
+//   min-width: 162px;
+// }
+
+.SliderContainer {
+  grid-area: slider;
+  display: grid;
+  grid-template-columns: 1fr 1042px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". main-top ."
+    "left-slider main-slider right-slider"
+    ". main-bottom .";
+  background-color: $white;
+
+  .TopContentWrapper {
+    grid-area: main-top;
+
+    .SliderTitle {
+      @include section-title;
+    }
+
+    .SliderTabsContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-template-areas: "first second third";
+      border-bottom: 4px solid $dark-grey;
+      border-radius: 4px;
+
+      .SliderTabName {
+        grid-area: first;
+        font-size: 20px;
+        color: $base-dark;
+        text-transform: uppercase;
+        text-align: center;
+
+        &:nth-of-type(2) {
+          grid-area: second;
+        }
+
+        &:nth-of-type(3) {
+          grid-area: third;
+        }
+      }
+    }
+  }
+
+  .Slider {
+    grid-area: main-slider;
+    margin-top: 70px;
+    width: 100%;
+    height: auto;
+    min-height: 688px;
+    background: url(../../assets/images/Image_01.jpg);
+  }
+
+  .BotoomContentWrapper {
+    grid-area: main-bottom;
+
+    .SliderButton {
+      @include button-secondary;
+    }
+
+    .SliderParagraph {
+      @include base-paragraph;
+
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+}

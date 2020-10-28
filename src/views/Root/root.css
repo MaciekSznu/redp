@@ -29,23 +29,22 @@ body {
 #root {
   display: grid;
   grid-template-columns: 1fr 1042px 1fr;
-  grid-template-rows: 60px 900px auto auto auto auto auto auto auto auto 40px;
+  grid-template-rows: 60px 900px auto auto auto auto auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
     ". menu ."
     ". hero ."
     ". investment ."
     ". schedule ."
-    ". slider ."
-    ". investor ."
-    ". flats ."
-    ". localization ."
+    "slider slider slider"
+    "investor investor investor"
+    "flats flats flats"
+    "localization localization localization"
     ". contact ."
-    ". footer ."
-    ". copyrights .";
+    "footer footer footer";
   overflow: hidden;
 }
-.hero { grid-area: hero; }
+/* .hero { grid-area: hero; }
 .investment { grid-area: investment; }
 .schedule { grid-area: schedule; }
 .slider { grid-area: slider; }
@@ -54,4 +53,4 @@ body {
 .localization { grid-area: localization; }
 .contact { grid-area: contact; }
 .footer { grid-area: footer; }
-.copyrights { grid-area: copyrights; }
+.copyrights { grid-area: copyrights; } */

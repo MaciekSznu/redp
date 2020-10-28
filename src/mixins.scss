@@ -85,3 +85,28 @@
   font-weight: 700;
   letter-spacing: 0.05em;
 }
+
+@mixin base-paragraph {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 300;
+  color: $base-dark;
+  letter-spacing: $medium-letter-spacing;
+}
+
+@mixin section-title {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 700;
+  color: $base-dark;
+  letter-spacing: $small-letter-spacing;
+}
+
+@mixin section-sub-title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+  color: $base-dark;
+  letter-spacing: $big-letter-spacing;
+  text-transform: uppercase;
+}

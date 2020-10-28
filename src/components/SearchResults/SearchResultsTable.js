@@ -1,7 +1,7 @@
 import React from 'react';
 import flatsArray from '../../assets/flatsArray';
 import { minFloorValue, maxFloorValue, minAreaValue, maxAreaValue, minRoomsValue, maxRoomsValue, minPriceValue, maxPriceValue } from '../Ranges/RangesData';
-import Pagination from '../Pagination/Pagination';
+// import Pagination from '../Pagination/Pagination';
 import styles from './SearchResults.module.scss';
 
 class SearchResultsTable extends React.Component {
@@ -24,6 +24,7 @@ class SearchResultsTable extends React.Component {
   isBalconyOrTerrace = (item) => {return item === true ? '\u2022' : ''};
 
   filterFlatsArray(props) {
+    console.log(this.props);
     return (
       this.state.flats.filter((el) => {
         return el.floor <= (this.props.filters.selectedFloors.max !== undefined ? this.props.filters.selectedFloors.max : maxFloorValue) &&
@@ -114,7 +115,7 @@ class SearchResultsTable extends React.Component {
             </tbody>
           </table>
         </div>
-        <Pagination pages={pages} onPageChange={(page) => {this.setState({page: page})}} />
+        {/* <Pagination pages={pages} onPageChange={(page) => {this.setState({page: page})}} /> */}
       </>
     )
   }

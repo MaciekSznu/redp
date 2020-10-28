@@ -1,0 +1,52 @@
+<svg width="142" height="160" viewBox="0 0 142 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M69.0186 1.12984C70.2467 0.429539 71.7533 0.429538 72.9814 1.12984L139.129 38.8489C140.378 39.5606 141.148 40.887 141.148 42.3237V117.676C141.148 119.113 140.378 120.439 139.129 121.151L72.9814 158.87C71.7533 159.57 70.2467 159.57 69.0186 158.87L2.87055 121.151C1.62247 120.439 0.851944 119.113 0.851944 117.676V42.3237C0.851944 40.887 1.62247 39.5606 2.87055 38.8489L69.0186 1.12984Z" fill="#669C95"/>
+<path d="M23 120C22.1716 120 21.5 120.672 21.5 121.5C21.5 122.328 22.1716 123 23 123V120ZM121 123C121.828 123 122.5 122.328 122.5 121.5C122.5 120.672 121.828 120 121 120V123ZM23 123H121V120H23V123Z" fill="#364859"/>
+<mask id="path-3-inside-1" fill="white">
+<rect x="37" y="37.998" width="49.0604" height="85" rx="2"/>
+</mask>
+<rect x="37" y="37.998" width="49.0604" height="85" rx="2" stroke="#364859" stroke-width="6" mask="url(#path-3-inside-1)"/>
+<mask id="path-4-inside-2" fill="white">
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 59.25 45.9863)"/>
+</mask>
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 59.25 45.9863)" stroke="#364859" stroke-width="6" mask="url(#path-4-inside-2)"/>
+<mask id="path-5-inside-3" fill="white">
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 59.25 66.5215)"/>
+</mask>
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 59.25 66.5215)" stroke="white" stroke-width="6" mask="url(#path-5-inside-3)"/>
+<mask id="path-6-inside-4" fill="white">
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 59.25 87.0566)"/>
+</mask>
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 59.25 87.0566)" stroke="#364859" stroke-width="6" mask="url(#path-6-inside-4)"/>
+<mask id="path-7-inside-5" fill="white">
+<rect width="13.6913" height="18.255" rx="2" transform="matrix(-1 0 0 1 59.25 104.744)"/>
+</mask>
+<rect width="13.6913" height="18.255" rx="2" transform="matrix(-1 0 0 1 59.25 104.744)" stroke="#364859" stroke-width="6" mask="url(#path-7-inside-5)"/>
+<mask id="path-8-inside-6" fill="white">
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 77.5039 45.9863)"/>
+</mask>
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 77.5039 45.9863)" stroke="white" stroke-width="6" mask="url(#path-8-inside-6)"/>
+<mask id="path-9-inside-7" fill="white">
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 77.5039 67.6621)"/>
+</mask>
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 77.5039 67.6621)" stroke="#364859" stroke-width="6" mask="url(#path-9-inside-7)"/>
+<mask id="path-10-inside-8" fill="white">
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 77.5039 88.2012)"/>
+</mask>
+<rect width="13.6913" height="13.6913" rx="2" transform="matrix(-1 0 0 1 77.5039 88.2012)" stroke="#364859" stroke-width="6" mask="url(#path-10-inside-8)"/>
+<mask id="path-11-inside-9" fill="white">
+<rect x="63.8125" y="64.2402" width="44.4966" height="58.7584" rx="2"/>
+</mask>
+<rect x="63.8125" y="64.2402" width="44.4966" height="58.7584" rx="2" fill="#669C95" stroke="#364859" stroke-width="6" mask="url(#path-11-inside-9)"/>
+<mask id="path-12-inside-10" fill="white">
+<rect x="70.6562" y="73.3691" width="13.6913" height="20.5369" rx="2"/>
+</mask>
+<rect x="70.6562" y="73.3691" width="13.6913" height="20.5369" rx="2" stroke="#364859" stroke-width="6" mask="url(#path-12-inside-10)"/>
+<mask id="path-13-inside-11" fill="white">
+<rect x="70.6562" y="99.6074" width="30.8054" height="23.3893" rx="2"/>
+</mask>
+<rect x="70.6562" y="99.6074" width="30.8054" height="23.3893" rx="2" stroke="#364859" stroke-width="6" mask="url(#path-13-inside-11)"/>
+<mask id="path-14-inside-12" fill="white">
+<rect x="87.7734" y="73.3691" width="13.6913" height="20.5369" rx="2"/>
+</mask>
+<rect x="87.7734" y="73.3691" width="13.6913" height="20.5369" rx="2" stroke="#364859" stroke-width="6" mask="url(#path-14-inside-12)"/>
+</svg>

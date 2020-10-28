@@ -1,0 +1,317 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.ContactContainer {
+  margin-top: 160px;
+  grid-area: contact;
+  background-color: $white;
+  display: grid;
+  grid-template-columns: 1042px;
+  grid-template-rows: auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title"
+    "icons"
+    "office"
+    "phone-form";
+
+  .ContentWrapperTop {
+    grid-area: title;
+
+    .ContactTitle {
+      @include section-title;
+    }
+    .ContactParagraph {
+      @include base-paragraph;
+      margin-bottom: 64px;
+    }
+  }
+
+  .ContactIconsContainer {
+    grid-area: icons;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "title title title"
+      "first second third";
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    .ContactSubTitle {
+      grid-area: title;
+      @include section-sub-title;
+      font-weight: 600;
+      letter-spacing: $small-letter-spacing;
+      margin-bottom: 56px;
+    }
+
+    .IconWrapper {
+      margin: 8px 0 48px;
+      grid-area: first;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .Icon {
+        margin-top: 8px;
+      }
+
+      .IconTitle {
+        margin-top: 24px;
+        margin-bottom: 40px;
+        font-size: 18px;
+        color: $base-dark;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: $small-letter-spacing;
+      }
+
+      &:nth-of-type(2) {
+        grid-area: second;
+      }
+
+      &:nth-of-type(3) {
+        grid-area: third;
+      }
+    }
+  }
+
+  .ContentWrapperBottom {
+    grid-area: office;
+
+    .ContactTitle {
+      font-size: 32px;
+      text-align: center;
+      color: $base-dark;
+      font-weight: 700;
+      letter-spacing: $small-letter-spacing;
+      text-transform: uppercase;
+      margin-bottom: 56px;
+    }
+    .ContactParagraph {
+      @include base-paragraph;
+      margin-bottom: 64px;
+    }
+
+    .ContactTabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 0px 20px;
+      grid-template-areas: "first second";
+      margin-bottom: 50px;
+      margin-top: 8px;
+
+      .ContactTabAdress,
+      .ContactTabOnline {
+        height: 227px;
+        padding: 42px 42px 32px 42px;
+        border-radius: 4px;
+      }
+
+      .ContactTabAdress {
+        background: $base-grey;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        .ContactTabAdressLeft,
+        .ContactTabAdressRight {
+          display: flex;
+          flex-direction: column;
+
+          .AdressBold {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 8px;
+            margin-bottom: 8px;
+          }
+
+          .AdressStandard {
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0;
+          }
+        }
+
+        .ContactTabAdressLeft {
+          align-items: flex-start;
+
+          .Logo {
+            flex-grow: 2;
+          }
+        }
+
+        .ContactTabAdressRight {
+          justify-content: space-between;
+
+          .AdressTop,
+          .AdressBottom {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .AdressBold {
+              font-size: 20px;
+              font-weight: 700;
+              margin-top: 8px;
+              margin-bottom: 8px;
+            }
+
+            .AdressStandard {
+              font-size: 18px;
+              font-weight: 400;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .ContactTabOnline {
+        background: $base-green;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .ContactTabOnlineContentWrapper {
+          .ContactTabOnlineHeader {
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: $small-letter-spacing;
+          }
+          .ContactTabOnlineText {
+            margin: 0;
+            padding: 0;
+            color: $white;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: $small-letter-spacing;
+          }
+        }
+
+        .ContactTabOnlineButtonWrapper {
+          margin-left: 0;
+          margin-top: 16px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          .ContactTabOnlineButton {
+            @include button-secondary;
+            padding: 0 32px;
+            box-sizing: border-box;
+            height: 58px;
+            line-height: 58px;
+            border: 3px solid $base-dark;
+            border-radius: 4px;
+            color: $base-dark;
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .ContactTabOnlineIcon {
+            padding: 0;
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .ContentWrapperPhoneForm {
+    grid-area: phone-form;
+
+    .ContactTitle {
+      @include section-sub-title;
+      letter-spacing: $small-letter-spacing;
+      margin-top: 100px;
+    }
+
+    .PhoneFormWrapper {
+      margin-top: 40px;
+      padding: 0 120px;
+
+      .PhoneFormLabel {
+        display: block;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        color: $base-dark;
+        font-weight: 500;
+      }
+
+      .PhoneFormSection {
+        display: flex;
+        justify-content: stretch;
+
+        .PhoneFormTextInput {
+          height: 58px;
+          margin-right: 16px;
+          padding: 16px 24px;
+          font-size: 16px;
+          letter-spacing: $medium-letter-spacing;
+          color: $base-dark;
+          flex-grow: 3;
+          border: 2px solid rgba(54, 72, 89, 0.1);
+          border-radius: 4px;
+
+          &::placeholder {
+            color: rgba(54, 72, 89, 0.15);
+            font-family: $base-font;
+            font-size: 18px;
+            letter-spacing: $medium-letter-spacing;
+          }
+        }
+
+        .PhoneFormButton {
+          flex-grow: 1;
+          @include button-primary;
+          height: 58px;
+          line-height: 58px;
+          border-radius: 4px;
+          font-size: 16px;
+          font-weight: 700;
+          padding: 0 16px;
+        }
+      }
+
+      .PhoneFormSectionSecond {
+        @extend .PhoneFormSection;
+        margin-top: 32px;
+        position: relative;
+
+        .PhoneFormCheckbox {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+
+        .PhoneFormCustomCheckbox {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 24px;
+          height: 24px;
+          margin-right: 14px;
+          border: 2px solid rgba(54, 72, 89, 0.1);
+          border-radius: 1px;
+        }
+
+        .PhoneFormCheckboxLabel {
+          padding-left: 38px;
+          font-size: 14px;
+          line-height: 21px;
+          font-weight: 300;
+          letter-spacing: $small-letter-spacing;
+        }
+      }
+    }
+  }
+}

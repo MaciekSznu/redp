@@ -1,0 +1,256 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.CompanyContainer {
+  margin-top: 160px;
+  grid-area: investor;
+  background-color: $white;
+  display: grid;
+  grid-template-columns: 1fr 1042px 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". title ."
+    "banner-01 banner-01 banner-01"
+    ". content-01 ."
+    "banner-02 banner-02 banner-02"
+    ". content-02 .";
+
+  .ContentWrapperTop {
+    grid-area: title;
+
+    .CompanyTitle {
+      @include section-title;
+    }
+  }
+
+  .ContentWrapperMid {
+    grid-area: content-01;
+
+    .CompanySubTitle {
+      @include section-sub-title;;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: $small-letter-spacing;
+      margin-bottom: 56px;
+    }
+
+    .CompanyParagraph {
+      @include base-paragraph;
+      margin-bottom: 64px;
+
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    .CompanyIconsContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-template-areas: "first second third";
+      margin-bottom: 50px;
+
+      .IconWrapper {
+        margin: 8px 0 48px;
+        grid-area: first;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .Icon {
+          position: relative;
+
+          .IconNumber {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: $white;
+            font-size: 48px;
+            font-weight: 500;
+            margin: 0;
+            letter-spacing: $medium-letter-spacing;
+          }
+        }
+
+        .IconTitle {
+          margin-top: 32px;
+          font-size: 18px;
+          color: $base-dark;
+          text-transform: uppercase;
+          font-weight: 500;
+          letter-spacing: $medium-letter-spacing;
+        }
+
+        &:nth-of-type(2) {
+          grid-area: second;
+        }
+
+        &:nth-of-type(3) {
+          grid-area: third;
+        }
+      }
+    }
+
+    .CompanyImageWrapper {
+      width: 100%;
+      height: 229px;
+      background: url(../../assets/images/Image_02.jpg);
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+
+      .CompanyHexagons {
+        position: absolute;
+        right: 63px;
+        top: -2px;
+      }
+    }
+  }
+
+  .ContentWrapperBottom {
+    grid-area: content-02;
+
+    .CompanyParagraph {
+      font-size: 24px;
+      color: $base-dark;
+      font-weight: 300;
+      line-height: 36px;
+      letter-spacing: $medium-letter-spacing;
+      margin-bottom: 48px;
+
+      strong {
+        font-weight: 500;
+      }
+    }
+    .CompanyButton {
+      @include button-secondary;
+    }
+  }
+}
+
+.FullWidthBannerTop {
+  grid-area: banner-01;
+  position: relative;
+  margin: 24px 0 100px;
+  height: 234px;
+  display: grid;
+  grid-template-columns: 1fr 1042px 1fr;
+  grid-template-rows: auto auto auto ;
+  gap: 0px 0px;
+  grid-template-areas:
+    "left content right";
+  background: $base-grey;
+
+  .BannerLeftContent {
+    display: block;
+    grid-area: left;
+    background: $base-grey;
+    width: 162px;
+    height: 100%;
+  }
+
+  .BannerRightContent {
+    grid-area: right;
+    background: $base-grey;
+    width: 162px;
+    height: 100%;
+  }
+
+
+  .TextWrapper {
+    grid-area: content;
+    .LeadText {
+      margin-top: 64px;
+      margin-bottom:24px;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: $small-letter-spacing;
+      color: $base-dark;
+
+      span {
+        color: $base-green;
+      }
+    }
+  
+    .AdditionalText {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: $small-letter-spacing;
+      text-transform: uppercase;
+      color: $base-dark;
+
+    }
+  }
+
+  .CompanyHexagons {
+    position: absolute;
+    right: 162px;
+    z-index: 2;
+  }
+}
+
+.FullWidthBannerBottom {
+  margin: 64px 0 40px;
+  grid-area: banner-02;
+  height: 321px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1042px 1fr;
+  grid-template-rows: auto auto auto ;
+  gap: 0px 0px;
+  grid-template-areas:
+    "left content right";
+  background: $base-grey;
+
+  .BannerLeftContent {
+    grid-area: left;
+    background: $base-grey;
+    width: 162px;
+    height: 100%;
+  }
+
+  .BannerRightContent {
+    grid-area: right;
+    background: $base-grey;
+    width: 162px;
+    height: 100%;
+  }
+
+  .TextWrapper {
+    grid-area: content;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .AdditionalText {
+      margin: 0;
+      font-size: 30px;
+      line-height: 48px;
+      font-weight: 400;
+      letter-spacing: $small-letter-spacing;
+      color: $base-dark;
+
+    }
+  }
+
+  .CompanyQuotationsTop {
+    position: absolute;
+    left: 48px;
+    top: 56px;
+    z-index: 2;
+  }
+
+  .CompanyQuotationsBottom {
+    position: absolute;
+    right: 48px;
+    bottom: 56px;
+    z-index: 2;
+  }
+}

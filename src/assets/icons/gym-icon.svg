@@ -1,0 +1,31 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M35.9277 2.18422C35.9725 2.1584 36.0276 2.1584 36.0723 2.18422L65.2492 19.0295C65.2939 19.0553 65.3215 19.1031 65.3215 19.1547V52.8453C65.3215 52.8969 65.2939 52.9447 65.2492 52.9705L36.0723 69.8158C36.0275 69.8416 35.9724 69.8416 35.9277 69.8158L6.75081 52.9705C6.70609 52.9447 6.67854 52.8969 6.67854 52.8453V19.1547C6.67854 19.1031 6.70609 19.0553 6.75081 19.0295L35.9277 2.18422Z"
+    fill="white" stroke="#56928A" stroke-width="3.7109" />
+  <mask id="gym-path-2-inside-1" fill="white">
+    <rect x="26.0703" y="38.5957" width="5.19435" height="19.8664" rx="1.06671"
+      transform="rotate(-90 26.0703 38.5957)" />
+  </mask>
+  <rect x="26.0703" y="38.5957" width="5.19435" height="19.8664" rx="1.06671" transform="rotate(-90 26.0703 38.5957)"
+    stroke="#364859" stroke-width="3.20012" mask="url(#gym-path-2-inside-1)" />
+  <mask id="gym-path-3-inside-2" fill="white">
+    <rect x="20" y="30.4336" width="5.34863" height="11.1308" rx="1.06671" />
+  </mask>
+  <rect x="20" y="30.4336" width="5.34863" height="11.1308" rx="1.06671" stroke="#364859" stroke-width="3.20012"
+    mask="url(#gym-path-3-inside-2)" />
+  <mask id="gym-path-4-inside-3" fill="white">
+    <rect x="23.8203" y="27.4648" width="5.34863" height="17.0672" rx="1.06671" />
+  </mask>
+  <rect x="23.8203" y="27.4648" width="5.34863" height="17.0672" rx="1.06671" fill="white" stroke="#364859"
+    stroke-width="3.20012" mask="url(#gym-path-4-inside-3)" />
+  <mask id="gym-path-5-inside-4" fill="white">
+    <rect width="5.34863" height="11.1308" rx="1.06671" transform="matrix(-1 0 0 1 52 30.4336)" />
+  </mask>
+  <rect width="5.34863" height="11.1308" rx="1.06671" transform="matrix(-1 0 0 1 52 30.4336)" stroke="#364859"
+    stroke-width="3.20012" mask="url(#gym-path-5-inside-4)" />
+  <mask id="gym-path-6-inside-5" fill="white">
+    <rect width="5.34863" height="17.0672" rx="1.06671" transform="matrix(-1 0 0 1 48.1797 27.4648)" />
+  </mask>
+  <rect width="5.34863" height="17.0672" rx="1.06671" transform="matrix(-1 0 0 1 48.1797 27.4648)" fill="white"
+    stroke="#364859" stroke-width="3.20012" mask="url(#gym-path-6-inside-5)" />
+</svg>

@@ -1,0 +1,293 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.LocationContainer {
+  margin-top: 160px;
+  grid-area: localization;
+  background-color: $white;
+  display: grid;
+  grid-template-columns: 1fr 1042px 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". title ."
+    "banner-01 banner-01 banner-01"
+    "banner-02 banner-02 banner-02"
+    ". content-01 ."
+    ". content-02 .";
+
+  .ContentWrapperTop {
+    grid-area: title;
+
+    .LocationTitle {
+      @include section-title;
+    }
+    .LocationParagraph {
+      @include base-paragraph;
+      margin-bottom: 64px;
+    }
+  }
+
+  .FullWidthBannerTop {
+    grid-area: banner-01;
+    position: relative;
+    margin: 24px 0 100px;
+    height: 234px;
+    display: grid;
+    grid-template-columns: 1fr 1042px 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas: "left content right";
+    background: $base-grey;
+
+    .BannerLeftContent {
+      display: block;
+      grid-area: left;
+      background: $base-grey;
+      width: 162px;
+      height: 100%;
+    }
+
+    .BannerRightContent {
+      grid-area: right;
+      background: $base-grey;
+      width: 162px;
+      height: 100%;
+    }
+
+    .TextWrapper {
+      grid-area: content;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      .LeadText {
+        margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: $small-letter-spacing;
+        color: $base-dark;
+      }
+
+      .AdditionalText {
+        margin: 0 0 16px;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: $small-letter-spacing;
+        text-transform: uppercase;
+        color: $base-dark;
+      }
+      .AdressText {
+        margin: 0 0 16px;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: $small-letter-spacing;
+        color: $base-dark;
+      }
+    }
+
+    .LocationHexagons {
+      position: absolute;
+      right: 162px;
+      z-index: 2;
+    }
+  }
+
+  .FullWidthMapWrapper {
+    grid-area: banner-02;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1042px 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". title ."
+      "map map map"
+      ". button .";
+
+    .LocationSubTitle {
+      grid-area: title;
+      @include section-sub-title;
+      font-weight: 600;
+      letter-spacing: $small-letter-spacing;
+      margin-bottom: 56px;
+    }
+
+    .FullWidthMap {
+      grid-area: map;
+      height: 492px;
+      background: url(../../assets/images/mapa.jpg);
+    }
+
+    .ButtonWrapper {
+      grid-area: button;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      .LocationButton {
+        @include button-secondary;
+      }
+    }
+  }
+
+  .LocationIconsContainer {
+    grid-area: content-02;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 20px;
+    grid-template-areas:
+      "title title title"
+      "first second third";
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    .LocationSubTitle {
+      grid-area: title;
+      @include section-sub-title;
+      font-weight: 600;
+      letter-spacing: $small-letter-spacing;
+      margin-bottom: 56px;
+    }
+
+    .IconWrapper {
+      margin: 8px 0 48px;
+      grid-area: first;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+
+      .Icon {
+        margin-top: 40px;
+      }
+
+      .IconTitle {
+        margin-top: 24px;
+        margin-bottom: 40px;
+        font-size: 18px;
+        color: $base-dark;
+        font-weight: 600;
+        letter-spacing: $small-letter-spacing;
+      }
+
+      &:nth-of-type(2) {
+        grid-area: second;
+      }
+
+      &:nth-of-type(3) {
+        grid-area: third;
+      }
+    }
+  }
+
+  .LocationAttributesContainer {
+    grid-area: content-01;
+
+    .LocationAttributesMain {
+      display: grid;
+      grid-template-columns: minmax(auto, 389px) 1fr;
+      grid-template-rows: auto auto;
+      gap: 0px 0px;
+      grid-template-areas:
+        "icon-01 description"
+        "icon-02 description";
+
+      .IconWrapper01 {
+        grid-area: icon-01;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .Flag {
+        }
+
+        .Description {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          max-width: 282px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .DescriptionText {
+            text-transform: uppercase;
+            text-align: center;
+            margin: 4px;
+          }
+        }
+      }
+
+      .IconWrapper02 {
+        @extend .IconWrapper01;
+        grid-area: icon-02;
+      }
+
+      .DescriptionWrapper {
+        grid-area: description;
+        padding-left: 102px;
+
+        .DescriptionHeader {
+          font-size: 22px;
+          text-transform: uppercase;
+          font-weight: 500;
+          color: $base-dark;
+          letter-spacing: $small-letter-spacing;
+        }
+
+        .DescriptionText {
+          font-size: 22px;
+          font-weight: 300;
+          color: $base-dark;
+          letter-spacing: $small-letter-spacing;
+          line-height: 30px;
+
+          strong {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .LocationAttributesAdditional {
+      margin-top: 48px;
+      display: flex;
+      justify-content: center;
+
+      .LocationAttributesDetails {
+        .LocationAttributesSummary::-webkit-details-marker {
+          // display: none;
+        }
+        .LocationAttributesSummary {
+          // display: block;
+
+          .LocationAttributesButton {
+            @include button-secondary;
+            cursor: pointer;
+          }
+        }
+
+        .LocationAttributesSecondary {
+          @extend .LocationAttributesMain;
+          margin-top: 48px;
+        }
+      }
+
+      // .LocationAttributesDetails[open] {
+      //   .LocationAttributesSecondary {
+      //     display: grid;
+      //   }
+      // }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.FlatsContainer {
+  margin-top: 160px;
+  grid-area: flats;
+  background-color: $white;
+  display: grid;
+  grid-template-columns: 1fr 1042px 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". title ."
+    ". subtitle ."
+    ". view ."
+    ". view-description ."
+    ". subtitle-filters ."
+    ". filters .";
+
+  .ContentWrapperTop {
+    grid-area: title;
+
+    .FlatsTitle {
+      @include section-title;
+    }
+    .FlatsParagraph {
+      @include base-paragraph;
+      margin-bottom: 64px;
+    }
+  }
+
+  .GraphicSearchTitleWrapper {
+    grid-area: subtitle;
+    border-bottom: 4px solid $dark-grey;
+    border-radius: 4px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 4px;
+      width: 208px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $base-green;
+      border-radius: 4px;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      bottom: -40px;
+      width: 0;
+      height: 0;
+      transform: translateX(-50%);
+      border-style: solid;
+      border-width: 40px 75px 0 75px;
+      border-color: $base-green transparent transparent transparent;
+    }
+
+    .GraphicSearchTitle {
+      @include section-sub-title;
+      font-size: 32px;
+      text-transform: uppercase;
+    }
+  }
+
+  .ViewDescriptionWrapper {
+    grid-area: view-description;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 60px;
+
+    .ViewDescriptionBox {
+      display: grid;
+      grid-template-columns: 56px 175px;
+      grid-template-rows: 29px 29px;
+      gap: 0px 24px;
+      grid-template-areas:
+        "icon title"
+        "icon status";
+
+      .HexagonAvaliable,
+      .HexagonReserved,
+      .HexagonSold {
+        grid-area: icon;
+      }
+
+      .HexagonAvaliable {
+        path {
+          fill: $base-green;
+        }
+      }
+
+      .HexagonReserved {
+        path {
+          fill: $reserved;
+        }
+      }
+
+      .HexagonSold {
+        path {
+          fill: $sold;
+        }
+      }
+
+      .Title {
+        grid-area: title;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 0;
+        letter-spacing: $small-letter-spacing;
+      }
+
+      .Status {
+        grid-area: status;
+        text-transform: capitalize;
+        font-size: 18px;
+        margin: 0;
+        letter-spacing: $small-letter-spacing;
+        align-self: end;
+      }
+    }
+  }
+
+  .FiltersTitleWrapper {
+    @extend .GraphicSearchTitleWrapper;
+    margin-top: 100px;
+
+    grid-area: subtitle-filters;
+
+    .FiltersTitle {
+      @extend .GraphicSearchTitle;
+    }
+  }
+}

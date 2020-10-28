@@ -6,16 +6,22 @@ import LocationView from "../LocationView/LocationView";
 import FlatsView from "../FlatsView/FlatsView";
 import CompanyView from "../CompanyView/CompanyView";
 import ContactView from "../ContactView/ContactView";
+import SliderView from '../SliderView/SliderView';
+import FooterView from "../FooterView/FooterView";
+
 
 const MainView = () => (
   <>
     <TopMenu />
     <HeroView />
     <InvestmentView />
-    {/* <FlatsView /> */}
-    {/* <LocationView /> */}
-    {/* <CompanyView /> */}
-    {/* <ContactView /> */}
+    <SliderView />
+    <CompanyView />
+
+    <FlatsView />
+    <LocationView />
+    <ContactView />
+    <FooterView />
   </>
 );
 
