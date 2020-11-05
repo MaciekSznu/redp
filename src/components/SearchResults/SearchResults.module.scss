@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 .searchResultsTableWrapper {
-  @media (min-width: 720px) {
+  @media (min-width: 768px) {
     margin-top: 56px;
     display: flex;
     justify-content: center;
@@ -46,100 +46,91 @@
     }
   }
 
-  // @media (min-width: 1024px) {
+  @media (max-width: 767px) {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
-  //   .searchResultTable {
-  //     width: calc(100% - 2rem);
-  //     text-align: center;
-  //     border-collapse: collapse;
-  //     border-top: 1px solid $color-4;
-  //     padding: 0 1rem;
-  //   }
-  // }
-
-  @media (max-width: 719px) {
-    .searchResultTable,
-    .searchResultTableHeader,
-    .searchResultTableRow,
-    tbody,
-    th,
-    td {
-      display: block;
-    }
-    .searchResultTable {
-      margin: 1rem;
+    .searchResultsTitle {
+      text-transform: uppercase;
+      font-size: 18px;
+      margin: 0;
+      color: $base-dark;
+      letter-spacing: $small-letter-spacing;
     }
 
-    .searchResultTableHeader th {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
+    .searchResultsText {
+      font-size: 13px;
+      color: $base-dark;
+      margin-top: 8px;
+      letter-spacing: $small-letter-spacing;
 
-    .searchResultTableRow {
-      border: 1px solid $color-4;
-      background-color: rgba($color-4, 0.2);
-
-      &:not(:last-of-type) {
-        border-bottom: none;
+      span {
+        font-size: 14px;
+        font-weight: 700;
       }
+    }
 
-      &:nth-of-type(odd) {
-        background-color: rgba($color-4, 0.1);
-      }
+    .FlatBox {
+      background: $base-grey;
+      padding: 16px 24px;
+      border-radius: 2px;
+      min-width: 320px;
+      margin-bottom: 8px;
 
-      td {
-        position: relative;
-        color: $color-4;
-        font-family: "Spartan", sans-serif;
-        font-weight: 500;
-        font-size: 0.7rem;
-        text-align: center;
-        padding: 3px;
-        height: 24px;
-        // padding-left: 200px; // do dopasowania
-        margin-left: 120px; // do dopasowania
-        border-bottom: 1px solid $color-4;
-        border-left: 1px solid $color-4;
+      .FlatBoxChapter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+        margin-bottom: 16px;
 
-        &:before {
-          position: absolute;
-          height: 21px;
-          left: 0;
-          width: 120px;
-          padding: 0 10px;
-          white-space: nowrap;
-          margin-left: -120px;
-          text-align: right;
-          border-bottom: 1px solid $color-4;
+        .FlatBoxText {
+          .FlatBoxHeader {
+            height: 20px;
+            margin: 0;
+            font-family: $base-font;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $base-dark;
+            font-size: 14px;
+            letter-spacing: $small-letter-spacing;
+          }
+          .FlatBoxParagraph {
+            height: 17px;
+            margin: 0;
+            font-family: $base-font;
+            font-weight: 400;
+            color: $base-dark;
+            font-size: 12px;
+            letter-spacing: $small-letter-spacing;
+          }
+
+          &:nth-of-type(2) {
+            .FlatBoxHeader,
+            .FlatBoxParagraph {
+              text-align: right;
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          margin: 0;
+          align-items: flex-end;
+          .FlatBoxText {
+            .FlatBoxParagraph {
+              color: $base-green;
+              height: 12px;
+            }
+          }
         }
       }
-
-      td:last-of-type {
-        border-bottom: none;
-      }
-
-      td:nth-of-type(1):before {
-        content: "Budynek";
-      }
-      td:nth-of-type(2):before {
-        content: "Mieszkanie";
-      }
-      td:nth-of-type(3):before {
-        content: "Piętro";
-      }
-      td:nth-of-type(4):before {
-        content: "Pokoje";
-      }
-      td:nth-of-type(5):before {
-        content: "Powierzchnia";
-      }
-      td:nth-of-type(6):before {
-        content: "Cena";
-      }
-      td:nth-of-type(7):before {
-        content: "Karta";
-        border-bottom: none;
+      .FlatBoxIcon {
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
       }
     }
   }

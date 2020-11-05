@@ -3,6 +3,7 @@
 html {
   overflow-y: scroll;
   overflow-x: hidden;
+
 }
 
 *,
@@ -21,22 +22,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   max-width: 100vw;
   overflow: hidden;
-  /* background: #aa9595; */
 }
 
 #root {
   display: grid;
   grid-template-columns: 1fr 1042px 1fr;
-  grid-template-rows: 60px 900px auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: 900px auto auto auto auto auto auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
-    ". menu ."
-    ". hero ."
+    ". hero contact-sidebar"
     ". investment ."
     ". schedule ."
-    "slider slider slider"
+    ". slider ."
     "investor investor investor"
     "flats flats flats"
     ". filters ."
@@ -45,13 +45,24 @@ body {
     "footer footer footer";
   overflow: hidden;
 }
-/* .hero { grid-area: hero; }
-.investment { grid-area: investment; }
-.schedule { grid-area: schedule; }
-.slider { grid-area: slider; }
-.investor { grid-area: investor; }
-.flats { grid-area: flats; }
-.localization { grid-area: localization; }
-.contact { grid-area: contact; }
-.footer { grid-area: footer; }
-.copyrights { grid-area: copyrights; } */
+
+@media screen and (max-width: 768px) {
+  #root {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 400px auto auto auto auto auto auto auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "hero"
+      "investment"
+      "schedule"
+      "slider"
+      "investor"
+      "flats"
+      "filters"
+      "localization"
+      "contact"
+      "footer";
+    overflow: hidden;
+  }
+}

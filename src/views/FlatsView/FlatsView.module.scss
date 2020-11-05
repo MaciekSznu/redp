@@ -62,6 +62,10 @@
       font-size: 32px;
       text-transform: uppercase;
     }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .ViewDescriptionWrapper {
@@ -118,6 +122,26 @@
         margin: 0;
         letter-spacing: $small-letter-spacing;
         align-self: end;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    margin-top: 64px;
+    margin-bottom: 24px;
+
+    .ContentWrapperTop {
+      .FlatsTitle {
+        font-size: 20px;
+        margin: 0;
+      }
+      .FlatsParagraph {
+        display: none;
       }
     }
   }

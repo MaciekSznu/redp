@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .pagination {
   display: flex;
@@ -12,25 +12,20 @@
     font-size: 20px;
     font-family: $base-font;
     font-weight: 400;
-    // margin: .5rem 0 0;
-    // padding: 0;
+    padding-left: 0;
 
     &__item {
       display: block;
-      width:  50px;
-      height:  56px;
+      width: 50px;
+      height: 56px;
       line-height: 56px;
-      // padding-top: .1rem;
       margin: 3px;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
       cursor: pointer;
-      transition: .2s;
+      transition: 0.2s;
       background: url(../../assets/helpers/hexagon-pagination.svg);
       background-position: center center;
       background-repeat: no-repeat;
-      
+
       color: $base-dark;
 
       // &:hover {
@@ -40,7 +35,6 @@
       &--active {
         background: url(../../assets/helpers/hexagon-pagination-active.svg);
         color: $white;
-
       }
       &--first {
         background: url(../../assets/helpers/page-prev.svg);
@@ -53,16 +47,23 @@
         background-repeat: no-repeat;
       }
     }
-  // @media (min-width: 768px) {
-  //     font-size: 1.4rem;
-  //     margin: .8rem 0 0;
-  
-  //     &__item {
-  //       width:  2.4rem;
-  //       height:  2.4rem;
-  //       margin: .4rem;
-  //       padding-top: .4rem;
-  //     }
-  //   }
+    @media screen and (max-width: 768px) {
+
+      font-size: 16px;
+      &__item {
+        width: 40px;
+        height: 42px;
+        line-height: 42px;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &--first {
+          background-size: 75%;
+        }
+        &--last {
+          background-size: 75%;
+        }
+      }
+    }
   }
 }

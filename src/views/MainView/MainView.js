@@ -1,5 +1,6 @@
 import React from 'react';
 import TopMenu from "../../components/Header/TopMenu";
+import ContactSideBar from "../../components/ContactSideBar/ContactSideBar";
 import HeroView from "../HeroView/HeroView";
 import InvestmentView from "../InvestmentView/InvestmentView";
 import LocationView from "../LocationView/LocationView";
@@ -13,6 +14,7 @@ import FiltersView from "../FiltersView/FiltersView";
 const MainView = () => (
   <>
     <TopMenu />
+    <ContactSideBar />
     <HeroView />
     <InvestmentView />
     <SliderView />

@@ -1,93 +1,96 @@
 @import "../../../variables.scss";
 
 .FiltersWrapper {
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  // justify-content: space-around;
-  // width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 120px;
+  gap: 0px 10px;
+  grid-template-areas: "filter-01 filter-02 filter-03 filter-04";
 
-  // .rangesItem {
-  //   width: 100%;
-  //   padding: .5rem 5rem 1.5rem;
-  //   margin-bottom: 1rem;
-
-  //   &:nth-child(odd) {
-  //     background-color: rgba($color-4, .3);
-  //     color: $footer-text-color;
-  //   }
-  //   &:nth-child(even) {
-  //     background-color: rgba($color-4, .05);
-  //   }
-
-
-  //   .rangesTitle {
-  //     color: $color-3;
-  //     font-family: 'Spartan', sans-serif;
-  //     font-weight: 500;
-  //     text-transform: uppercase;
-  //     text-align: center;
-  //     font-size: 1rem;
-  //     padding-bottom: .5rem;
-
-  //   }
-  // }
-
-  // @media (min-width: 768px) {
-  //   justify-content: space-between;
-  //   .rangesItem {
-  //     width: calc(50% - .5rem);
-  //     padding: 1rem 5rem 2.5rem;
-
-  //     &:nth-child(3) {
-  //       order: 2;
-  //     }
-  //   }
-  // }
-
-  // @media (min-width: 1024px) {
-    width: 100%;
+  .FilterFloors,
+  .FilterRooms,
+  .FilterArea,
+  .FilterPrice {
+    position: relative;
+    border: 2px solid $base-grey;
+    border-radius: 4px;
+    padding: 16px 36px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 120px;
-    gap: 0px 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-    "filter-01 filter-02 filter-03 filter-04";
+      "title"
+      "values"
+      "slider";
 
-    .FilterFloors, .FilterRooms, .FilterArea, .FilterPrice {
-      position: relative;
-      border: 2px solid $base-grey;
-      border-radius: 4px;
-      padding: 16px 36px;
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto auto;
-      grid-template-areas:
-        "title"
-        "slider";
-
-      .FilterTitle {
-        grid-area: title;
-        margin: 0;
-        font-size: 16px;
-        margin-left: -15px;
-        text-transform: uppercase;
-        letter-spacing: $medium-letter-spacing;
-      }
-
+    .FilterTitle {
+      grid-area: title;
+      margin: 0;
+      font-size: 16px;
+      margin-left: -15px;
+      text-transform: uppercase;
+      letter-spacing: $medium-letter-spacing;
     }
+
+    .FilterValuesWrapper {
+      grid-area: values;
+      display: grid;
+      margin-left: -15px;
+      margin-right: -15px;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+      grid-template-areas: "from to";
+
+      .FilterValue {
+        grid-area: from;
+        font-size: 12px;
+        font-family: $base-font;
+        color: $base-dark;
+        letter-spacing: $small-letter-spacing;
+
+        &:nth-of-type(2) {
+          grid-area: to;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .FilterFloors {
+    grid-area: filter-01;
+    margin: 0;
+  }
+  .FilterRooms {
+    grid-area: filter-02;
+  }
+  .FilterArea {
+    grid-area: filter-03;
+  }
+  .FilterPrice {
+    grid-area: filter-04;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: auto 320px auto;
+    grid-template-rows: 120px 120px 120px 120px;
+    gap: 0 0;
+    grid-template-areas:
+      ". filter-01 ."
+      ". filter-02 ."
+      ". filter-03 ."
+      ". filter-04 .";
 
     .FilterFloors {
-      grid-area: filter-01;
+      border-bottom: none;
     }
-    .FilterRooms {
-      grid-area: filter-02;
-    }
+    .FilterRooms,
     .FilterArea {
-      grid-area: filter-03;
+      border-top: none;
+      border-bottom: none;
     }
     .FilterPrice {
-      grid-area: filter-04;
+      border-top: none;
     }
-  // }
+  }
 }

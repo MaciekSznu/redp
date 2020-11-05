@@ -24,7 +24,7 @@
   <rect width="5.34863" height="11.1308" rx="1.06671" transform="matrix(-1 0 0 1 52 30.4336)" stroke="#364859"
     stroke-width="3.20012" mask="url(#gym-path-5-inside-4)" />
   <mask id="gym-path-6-inside-5" fill="white">
-    <rect width="5.34863" height="17.0672" rx="1.06671" transform="matrix(-1 0 0 1 48.1797 27.4648)" />
+    <rect width="5.34863" height="17.0672" rx="1.06671" transform="matrix(-1 0 0 1 48.1797 27.4648)"  />
   </mask>
   <rect width="5.34863" height="17.0672" rx="1.06671" transform="matrix(-1 0 0 1 48.1797 27.4648)" fill="white"
     stroke="#364859" stroke-width="3.20012" mask="url(#gym-path-6-inside-5)" />

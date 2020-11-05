@@ -65,6 +65,7 @@
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.05em;
+  cursor: pointer;
 }
 
 @mixin button-secondary {
@@ -84,6 +85,7 @@
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.05em;
+  cursor: pointer;
 }
 
 @mixin base-paragraph {
@@ -92,6 +94,13 @@
   font-weight: 300;
   color: $base-dark;
   letter-spacing: $medium-letter-spacing;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @mixin section-title {
@@ -109,4 +118,12 @@
   color: $base-dark;
   letter-spacing: $big-letter-spacing;
   text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: $medium-letter-spacing;
+  }
 }

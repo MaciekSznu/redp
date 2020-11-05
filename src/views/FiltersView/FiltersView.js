@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./FiltersView.module.scss";
 import RangeSearchInputs from "../FiltersView/SearchInputs/RangeSearchInputs";
 import SearchResultsTable from "../../components/SearchResults/SearchResultsTable";
+import { floorRange, roomsRange, areaRange, priceRange } from "../../components/Ranges/RangesData";
+
 // import FlatsSlider from '../../components/Sliders/FlatsSlider';
 // import Fade from 'react-reveal/Fade';
 // import GraphicSearch from '../../components/GraphicSearch/GraphicSearch';
@@ -9,10 +11,10 @@ import SearchResultsTable from "../../components/SearchResults/SearchResultsTabl
 class FiltersView extends React.Component {
   state = {
     filters: {
-      selectedFloors: {},
-      selectedRooms: {},
-      selectedArea: {},
-      selectedPrice: {},
+      selectedFloors: floorRange,
+      selectedRooms: roomsRange,
+      selectedArea: areaRange,
+      selectedPrice: priceRange,
     },
   };
 
@@ -48,6 +50,7 @@ class FiltersView extends React.Component {
             onRoomsChange={this.onRoomsChange}
             onAreaChange={this.onAreaChange}
             onPriceChange={this.onPriceChange}
+            filters={this.state.filters}
           />
         </div>
         <SearchResultsTable filters={this.state.filters} />

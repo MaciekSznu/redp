@@ -4,23 +4,68 @@
 .heroImageContainer {
   position: relative;
   grid-area: hero;
-  background-color: $white;
+  background: url(../../assets/images/hero_1042_900.jpg);
 
   .heroImageText {
     position: absolute;
     top: 102px;
-    left: 122px;
-    color: $base-green;
+    left: 102px;
+    color: $white;
   }
 
   .heroButton {
     @include button-primary;
     position: absolute;
     top: 200px;
-    left: 122px;
+    left: 102px;
 
     &:hover {
       @include button-secondary;
     }
   }
+
+  .PatternLeft, .PatternRight {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .PatternLeft {
+    left: 0;
+  }
+
+  .PatternRight {
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    background: url(../../assets/images/hero_667_500.jpg);
+    margin-top: 60px;
+
+
+    .heroImageText {
+      top: 100px;
+      left: 40px;
+      color: $white;
+    }
+  
+    .heroButton {
+      @include button-primary;
+      position: absolute;
+      top: 180px;
+      left: 40px;
+  
+      &:hover {
+        @include button-secondary;
+      }
+    }
+    .PatternLeft {
+      transform: scale(.45);
+      transform-origin: bottom left;
+    }
+    .PatternRight {
+      transform: scale(.45);
+      transform-origin: bottom right;
+    }
+  }
+
 }

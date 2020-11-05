@@ -14,6 +14,7 @@
 // }
 
 .SliderContainer {
+  margin-top: 160px;
   grid-area: slider;
   display: grid;
   grid-template-columns: 1fr 1042px 1fr;
@@ -30,6 +31,7 @@
 
     .SliderTitle {
       @include section-title;
+      margin-bottom: 58px;
     }
 
     .SliderTabsContainer {
@@ -47,6 +49,8 @@
         color: $base-dark;
         text-transform: uppercase;
         text-align: center;
+        position: relative;
+        cursor: pointer;
 
         &:nth-of-type(2) {
           grid-area: second;
@@ -55,17 +59,58 @@
         &:nth-of-type(3) {
           grid-area: third;
         }
+
+        &:before {
+          position: absolute;
+          content: "";
+          height: 4px;
+          width: 208px;
+          bottom: -24px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: $base-green;
+          border-radius: 4px;
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          left: 50%;
+          bottom: -60px;
+          width: 0;
+          height: 0;
+          transform: translateX(-50%);
+          border-style: solid;
+          border-width: 40px 75px 0 75px;
+          border-color: $base-green transparent transparent transparent;
+        }
       }
     }
   }
 
   .Slider {
+    position: relative;
     grid-area: main-slider;
     margin-top: 70px;
     width: 100%;
     height: auto;
     min-height: 688px;
     background: url(../../assets/images/Image_01.jpg);
+
+    .SlidePrev,
+    .SlideNext {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .SlidePrev {
+      left: 32px;
+    }
+
+    .SlideNext {
+      right: 32px;
+    }
   }
 
   .BotoomContentWrapper {
@@ -80,6 +125,79 @@
 
       strong {
         font-weight: 500;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "main-top"
+      "main-slider"
+      "main-bottom";
+
+    .TopContentWrapper {
+      .SliderTitle {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+
+      .SliderTabsContainer {
+        border-bottom: 2px solid $dark-grey;
+        border-radius: 2px;
+
+        .SliderTabName {
+          font-size: 14px;
+          margin-top: 0;
+
+          &:before {
+            height: 2px;
+            width: 72px;
+            bottom: -16px;
+            border-radius: 2px;
+          }
+
+          &:after {
+            bottom: -30px;
+            border-width: 16px 25px 0 25px;
+          }
+        }
+      }
+    }
+
+    .Slider {
+      margin-top: 24px;
+      width: 100%;
+      min-height: 290px;
+      background: url(../../assets/images/Image_01.jpg);
+      background-size: cover;
+
+      .SlidePrev,
+      .SlideNext {
+        width: 42px;
+        height: 42px;
+      }
+
+      .SlidePrev {
+        left: 20px;
+      }
+
+      .SlideNext {
+        right: 20px;
+      }
+    }
+
+    .BotoomContentWrapper {
+      .SliderButton {
+        margin: 0 auto;
+      }
+
+      .SliderParagraph {
+        font-size: 16px;
+        margin-top: 36px;
+        margin-bottom: 32px;
       }
     }
   }

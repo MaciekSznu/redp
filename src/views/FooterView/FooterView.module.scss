@@ -14,6 +14,19 @@
       "first second third"
       "copy-01 copy-02 copy-03";
 
+    .FooterLogo {
+      display: none;
+    }
+
+    .FooterPatternTop,
+    .FooterPatternBottom {
+      display: none;
+    }
+
+    .SocialLinks {
+      display: none;
+    }
+
     .ContentWrapper {
       grid-area: first;
       display: flex;
@@ -113,6 +126,115 @@
     .Copyright03 {
       @extend .Copyright01;
       grid-area: copy-03;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+
+    .FooterContentFullWidthContainer {
+      position: relative;
+      display: grid;
+      max-width: 100vw;
+      grid-template-columns: 100%;
+      grid-template-rows: 100px auto auto auto 36px;
+      gap: 0px 0px;
+      grid-template-areas:
+        "logo"
+        "adress"
+        "social"
+        "privacy"
+        "copyrights";
+
+      .FooterLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: logo;
+        background: $base-grey;
+
+        .LogoSubstitute {
+          transform: scale(1.25);
+          path {
+            fill: $base-green;
+          }
+        }
+      }
+
+      .FooterPatternTop,
+      .FooterPatternBottom {
+        display: block;
+        position: absolute;
+      }
+
+      .FooterPatternTop {
+        top: 0;
+        left: 0;
+      }
+
+      .FooterPatternBottom {
+        transform: rotate(180deg);
+        bottom: 36px;
+        right: 0;
+      }
+
+      .ContentWrapper {
+        grid-area: adress;
+
+        .AdressWrapper {
+          padding: 20px 0 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .AdressBold {
+            margin: 6px 0;
+            font-size: 14px;
+            font-weight: 700;
+          }
+
+          .AdressStandard {
+            margin: 0;
+            font-size: 12px;
+            font-weight: 400;
+          }
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          display: none;
+        }
+      }
+
+      .SocialLinks {
+        grid-area: social;
+        display: flex;
+        justify-content: center;
+        background-color: $base-grey;
+
+        .Facebook, .Twitter, .Instagram {
+          .Icon {
+            width: 24px;
+          }
+        }
+
+        .Facebook, .Twitter {
+          margin-right: 50px;
+        }
+      }
+
+      .Copyright01 {
+        grid-area: copyrights;
+        line-height: 36px;
+        font-weight: 400;
+      }
+
+      .Copyright03 {
+        grid-area: privacy;
+        background: $base-grey;
+        padding-bottom: 24px;
+        font-size: 12px;
+      }
     }
   }
 }

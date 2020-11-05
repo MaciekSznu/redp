@@ -11,6 +11,8 @@ import { ReactComponent as ShopIcon } from "../../assets/icons/shop-icon.svg";
 import { ReactComponent as GymIcon } from "../../assets/icons/gym-icon.svg";
 import { ReactComponent as DoctorIcon } from "../../assets/icons/doctor-icon.svg";
 import { ReactComponent as EducationIcon } from "../../assets/icons/education-icon.svg";
+import { ReactComponent as HexagonSeeMore } from "../../assets/helpers/hexagon-see-more.svg";
+
 
 // import { ReactComponent as QuaotationMark } from "../../assets/helpers/quotation-mark.svg";
 
@@ -74,7 +76,7 @@ const LocationView = () => {
           <div className={styles.LocationAttributesAdditional}>
             <details className={styles.LocationAttributesDetails}>
               <summary className={styles.LocationAttributesSummary}>
-                <button className={styles.LocationAttributesButton}>zobacz więcej</button>
+                <HexagonSeeMore className={styles.LocationAttributesIcon}/>
               </summary>
               <div className={styles.LocationAttributesSecondary}>
                 <div className={styles.IconWrapper01}>
@@ -100,7 +102,7 @@ const LocationView = () => {
                   </p>
                 </div>
               </div>
-              <div className={styles.LocationAttributesSecondary}>
+              <div className={styles.LocationAttributesSecondary02}>
                 <div className={styles.IconWrapper01}>
                   <Flag className={styles.Flag} />
                   <div className={styles.Description}>
