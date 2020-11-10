@@ -19,7 +19,7 @@ import { ReactComponent as HexagonSeeMore } from "../../assets/helpers/hexagon-s
 const LocationView = () => {
   return (
     <>
-      <div className={styles.LocationContainer}>
+      <div className={styles.LocationContainer} id="lokalizacja">
         <div className={styles.ContentWrapperTop}>
           <h2 className={styles.LocationTitle}>Lokalizacja</h2>
           <p className={styles.LocationParagraph}>

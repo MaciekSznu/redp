@@ -2,6 +2,7 @@
 @import "../../mixins.scss";
 
 .heroImageContainer {
+  margin-top: 51px;
   position: relative;
   grid-area: hero;
   background: url(../../assets/images/hero_1042_900.jpg);

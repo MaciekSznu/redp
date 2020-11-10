@@ -9,7 +9,7 @@ import { ReactComponent as CameraIcon } from "../../assets/icons/camera-icon.svg
 const ContactView = () => {
   return (
     <>
-      <div className={styles.ContactContainer}>
+      <div className={styles.ContactContainer} id="kontakt">
         <div className={styles.ContentWrapperTop}>
           <h2 className={styles.ContactTitle}>Skontaktuj się z nami</h2>
           <p className={styles.ContactParagraph}>

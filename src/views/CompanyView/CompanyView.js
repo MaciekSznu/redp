@@ -8,7 +8,7 @@ import { ReactComponent as QuaotationMark } from "../../assets/helpers/quotation
 const CompanyView = () => {
   return (
     <>
-      <div className={styles.CompanyContainer}>
+      <div className={styles.CompanyContainer} id="inwestor">
         <div className={styles.ContentWrapperTop}>
           <h2 className={styles.CompanyTitle}>Deweloper warty zaufania</h2>
         </div>

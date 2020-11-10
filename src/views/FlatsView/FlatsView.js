@@ -6,7 +6,7 @@ import GraphicSearch from "../../components/GraphicSearch/GraphicSearch";
 const FlatsView = () => {
   return (
     <>
-      <div className={styles.FlatsContainer}>
+      <div className={styles.FlatsContainer} id="mieszkania">
         <div className={styles.ContentWrapperTop}>
           <h2 className={styles.FlatsTitle}>Wybierz swoje mieszkanie</h2>
           <p className={styles.FlatsParagraph}>

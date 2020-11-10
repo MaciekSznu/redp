@@ -16,6 +16,15 @@
 
   .PhoneNumber {
     margin-top: 16px;
+    line-height: 23px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $base-dark;
+    text-decoration: none;
+
+    &:visited {
+      color: $base-dark;
+    }
   }
 
   @media screen and (max-width: 768px) {

@@ -18,7 +18,7 @@ import { ReactComponent as HexagonDot } from "../../assets/icons/hexagon-dot.svg
 const InvestmentView = () => {
   return (
     <>
-      <div className={styles.InvestmentContainer}>
+      <div className={styles.InvestmentContainer} id="inwestycja">
         <h2 className={styles.InvestmentTitle}>Osiedle Koralowa II</h2>
         <h3 className={styles.InvestmentSubTitle}>Bliskie Tobie i Twoim Potrzebom</h3>
         <p className={styles.InvestmentParagraph}>

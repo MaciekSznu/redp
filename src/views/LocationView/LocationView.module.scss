@@ -2,7 +2,8 @@
 @import "../../mixins.scss";
 
 .LocationContainer {
-  margin-top: 160px;
+  margin-top: 100px;
+  padding-top: 60px;
   grid-area: localization;
   background-color: $white;
   display: grid;
