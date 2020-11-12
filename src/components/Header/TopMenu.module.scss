@@ -25,7 +25,7 @@
   background-color: $white;
   z-index: 1001;
 }
- 
+
 .topMenuWrapperMobileHidden {
   position: fixed;
   top: -100vh;
@@ -58,6 +58,23 @@
     transform: rotate(-180deg);
     transform-origin: center;
   }
+
+  .additionalItem {
+    margin: 16px 0;
+    .phoneNumber {
+      margin: 16px 0;
+      line-height: 23px;
+      font-size: 16px;
+      font-weight: 700;
+      color: $base-dark;
+      text-decoration: none;
+      letter-spacing: $medium-letter-spacing;
+
+      &:visited {
+        color: $base-dark;
+      }
+    }
+  }
 }
 
 .topMenuWrapperMobileOpen {
@@ -65,7 +82,6 @@
   transform: translateY(100vh);
   transition: transform 1s;
 }
-
 
 .topMenuWrapper {
   // @extend .topMenuWrapperMobileHidden;
@@ -84,7 +100,7 @@
   align-items: center;
   background: $white;
   z-index: 5;
-  }
+}
 
 // .scrollToTop {
 //   position: fixed;
@@ -105,5 +121,3 @@
 //     font-size: 1.5rem;
 //   }
 // }
-
-

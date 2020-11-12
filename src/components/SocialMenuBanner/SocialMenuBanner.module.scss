@@ -1,0 +1,27 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.SocialMenuBanner {
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .Facebook,
+  .Twitter,
+  .Instagram {
+    display: block;
+    height: 24px;
+    width: 24px;
+
+    &:not(:last-of-type) {
+      margin-right: 50px;
+    }
+
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+}

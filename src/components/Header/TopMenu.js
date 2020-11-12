@@ -3,9 +3,9 @@ import styles from "./TopMenu.module.scss";
 // import { Link } from 'react-scroll';
 import Hamburger from "./TopMenuHamburger";
 import TopMenuItems from "./TopMenuItems";
+import SocialMenuBanner from "../SocialMenuBanner/SocialMenuBanner";
 import { ReactComponent as HexagonLogoWrapper } from "../../assets/helpers/hexagon-logo-wrapper.svg";
 import { ReactComponent as MobileMenuPattern } from "../../assets/helpers/mobile-menu-pattern.svg";
-
 
 class TopMenu extends React.Component {
   state = {
@@ -70,9 +70,15 @@ class TopMenu extends React.Component {
           </div>
         )}
         <ul className={topMenuWrapperStyle()}>
-          <MobileMenuPattern className={styles.mobileMenuPatternTop}/>
-          <TopMenuItems />
-          <MobileMenuPattern className={styles.mobileMenuPatternBottom}/>
+          {this.state.width < 768 ? <MobileMenuPattern className={styles.mobileMenuPatternTop} /> : null}
+          <TopMenuItems openMobileMenu={this.openMobileMenu} />
+          <li className={styles.additionalItem}>
+            <a className={styles.phoneNumber} href="tel:+48122148430">
+              (12) 214 84 30
+            </a>
+          </li>
+          <SocialMenuBanner />
+          {this.state.width < 768 ? <MobileMenuPattern className={styles.mobileMenuPatternBottom} /> : null}
         </ul>
         {/* <div className={styles.scrollToTop}>
           <Link to='hero' smooth={true} duration={1000}>
