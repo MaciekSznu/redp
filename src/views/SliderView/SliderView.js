@@ -3,7 +3,6 @@ import styles from "./SliderView.module.scss";
 import { ReactComponent as SlidePrev } from "../../assets/helpers/slide-prev.svg";
 import { ReactComponent as SlideNext } from "../../assets/helpers/slide-next.svg";
 
-
 const SliderView = () => {
   return (
     <>
@@ -18,8 +17,8 @@ const SliderView = () => {
           </div>
         </div>
         <div className={styles.Slider}>
-          <SlidePrev className={styles.SlidePrev}/>
-          <SlideNext className={styles.SlideNext}/>
+          <SlidePrev className={styles.SlidePrev} />
+          <SlideNext className={styles.SlideNext} />
         </div>
         <div className={styles.BotoomContentWrapper}>
           <p className={styles.SliderParagraph}>

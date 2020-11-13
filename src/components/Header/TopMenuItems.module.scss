@@ -14,30 +14,23 @@
   font-family: $base-font;
 }
 
-.topMenuItemActive {
-  // min-width: 125px;
-  // cursor: pointer;
-  // color: $color-5;
-  // font-weight: 700;
-  // border-bottom: 1px solid $color-5;
-  background: rgba($white, 0.2);
-}
-
 @media (min-width: 768px) {
   .topMenuItem {
-    height: 28px;
-    line-height: 23px;
+    height: 51px;
+    line-height: 51px;
     font-size: 16px;
-    margin: 16px 32px;
+    padding: 0 32px;
     color: $base-green;
-    transition: color 0.5s ease-out;
+    transition: color 0.5s ease-out, background 0.5s ease-out;
 
     &:hover {
-      color: $base-dark;
+      color: $white;
+      background: $base-green;
     }
   }
 
   .topMenuItemActive {
-    color: $base-dark;
+    color: $white;
+    background: $base-green;
   }
 }

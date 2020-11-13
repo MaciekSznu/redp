@@ -41,10 +41,10 @@ const ContactView = () => {
         <div className={styles.ContentWrapperBottom}>
           <h2 className={styles.ContactTitle}>biuro sprzedaży</h2>
           <p className={styles.ContactParagraph}>
-            Nasze biura sprzedaży pozostają do Państwa dyspozycji pod wzkazanymi poniżej adresami.{" "}
+            Nasze biura sprzedaży pozostają do Państwa dyspozycji pod wzkazanymi poniżej adresami.
             <strong>
               W celu umówienia indywidualnego spotkania z naszym doradcą prosimy o wcześniejszy kontakt telefoniczny.
-            </strong>{" "}
+            </strong>
             Zachęcamy także do skorzystania z <strong>rezerwacji spotkania online</strong>.
           </p>
           <div className={styles.ContactTabs}>
@@ -86,11 +86,18 @@ const ContactView = () => {
                 telefon
               </label>
               <div className={styles.PhoneFormSection}>
-                <input className={styles.PhoneFormTextInput} id="phone" type="text" name="phone" placeholder="000 000 000"></input>
-                <button className={styles.PhoneFormButton} type="submit">zamów rozmowę</button>
+                <input
+                  className={styles.PhoneFormTextInput}
+                  id="phone"
+                  type="text"
+                  name="phone"
+                  placeholder="000 000 000"></input>
+                <button className={styles.PhoneFormButton} type="submit">
+                  zamów rozmowę
+                </button>
               </div>
               <div className={styles.PhoneFormSectionSecond}>
-                <input className={styles.PhoneFormCheckbox}type="checkbox" id="rodo" name="rodo" />
+                <input className={styles.PhoneFormCheckbox} type="checkbox" id="rodo" name="rodo" />
                 <div className={styles.PhoneFormCustomCheckbox}></div>
                 <label className={styles.PhoneFormCheckboxLabel} htmlFor="rodo">
                   Wyrażam zgodę na przetwarzanie moich danych osobowych w celu przedstawienia oferty marketingowej
