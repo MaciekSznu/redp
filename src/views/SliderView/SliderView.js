@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./SliderView.module.scss";
-import { ReactComponent as SlidePrev } from "../../assets/helpers/slide-prev.svg";
-import { ReactComponent as SlideNext } from "../../assets/helpers/slide-next.svg";
+import MainSlider from "../../components/Slider/Slider";
 
 const SliderView = () => {
   return (
@@ -17,8 +16,7 @@ const SliderView = () => {
           </div>
         </div>
         <div className={styles.Slider}>
-          <SlidePrev className={styles.SlidePrev} />
-          <SlideNext className={styles.SlideNext} />
+          <MainSlider />
         </div>
         <div className={styles.BotoomContentWrapper}>
           <p className={styles.SliderParagraph}>
