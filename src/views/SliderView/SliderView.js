@@ -1,22 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SliderView.module.scss";
-import MainSlider from "../../components/Slider/Slider";
+import InvestmentSlider from "../../components/Slider/InvestmentSlider";
+import LocalizationSlider from "../../components/Slider/LocalizationSlider";
+import InteriorSlider from "../../components/Slider/InteriorSlider";
 
 const SliderView = () => {
+  const [slider, setSlider] = useState("investment");
+
   return (
     <>
-      {/* <div className={styles.SliderLeftContainer}></div> */}
       <div className={styles.SliderContainer}>
         <div className={styles.TopContentWrapper}>
           <h2 className={styles.SliderTitle}>Poznaj inwestycję KORALOWA II</h2>
           <div className={styles.SliderTabsContainer}>
-            <p className={styles.SliderTabName}>osiedle</p>
-            <p className={styles.SliderTabName}>okolica</p>
-            <p className={styles.SliderTabName}>wnętrza</p>
+            <p className={styles.SliderTabName} onClick={() => setSlider("investment")}>
+              osiedle
+            </p>
+            <p className={styles.SliderTabName} onClick={() => setSlider("localization")}>
+              okolica
+            </p>
+            <p className={styles.SliderTabName} onClick={() => setSlider("interior")}>
+              wnętrza
+            </p>
           </div>
         </div>
         <div className={styles.Slider}>
-          <MainSlider />
+          {slider === "investment" && <InvestmentSlider />}
+          {slider === "localization" && <LocalizationSlider />}
+          {slider === "interior" && <InteriorSlider />}
         </div>
         <div className={styles.BotoomContentWrapper}>
           <p className={styles.SliderParagraph}>
@@ -26,7 +37,6 @@ const SliderView = () => {
           <button className={styles.SliderButton}>szczegóły oferty</button>
         </div>
       </div>
-      {/* <div className={styles.SliderRightContainer}></div> */}
     </>
   );
 };

@@ -4,12 +4,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slider.css";
 import SliderButton from "./SliderButton";
-import Slide_01 from "../../assets/images/slide_01_1042_728.jpg";
-import Slide_02 from "../../assets/images/slide_02_1042_728.jpg";
-import Slide_03 from "../../assets/images/slide_03_1042_728.jpg";
-import Slide_04 from "../../assets/images/slide_04_1042_728.jpg";
+import Slide_01 from "../../assets/images/interior_01_1042_728.jpg";
+import Slide_02 from "../../assets/images/interior_02_1042_728.jpg";
+import Slide_03 from "../../assets/images/interior_03_1042_728.jpg";
+import Slide_04 from "../../assets/images/interior_04_1042_728.jpg";
+import Slide_05 from "../../assets/images/interior_05_1042_728.jpg";
 
-class MainSlider extends React.Component {
+class InteriorSlider extends React.Component {
   render() {
     const settings = {
       // autoplay: true,
@@ -38,9 +39,12 @@ class MainSlider extends React.Component {
         <div>
           <img src={Slide_04} alt="Slide_04" />
         </div>
+        <div>
+          <img src={Slide_05} alt="Slide_05" />
+        </div>
       </Slider>
     );
   }
 }
 
-export default MainSlider;
+export default InteriorSlider;
