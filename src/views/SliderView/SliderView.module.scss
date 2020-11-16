@@ -56,8 +56,9 @@
           bottom: -24px;
           left: 50%;
           transform: translateX(-50%);
-          background: $base-green;
+          background: $dark-grey;
           border-radius: 4px;
+          transition: background 1s ease-out;
         }
         &:after {
           position: absolute;
@@ -69,6 +70,19 @@
           transform: translateX(-50%);
           border-style: solid;
           border-width: 40px 75px 0 75px;
+          border-color: $dark-grey transparent transparent transparent;
+          transition: border-color 1s ease-out;
+        }
+      }
+
+      .SliderTabNameActive {
+        @extend .SliderTabName;
+        font-weight: 700;
+
+        &:before {
+          background: $base-green;
+        }
+        &:after {
           border-color: $base-green transparent transparent transparent;
         }
       }

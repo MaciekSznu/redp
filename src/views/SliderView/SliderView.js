@@ -13,13 +13,19 @@ const SliderView = () => {
         <div className={styles.TopContentWrapper}>
           <h2 className={styles.SliderTitle}>Poznaj inwestycję KORALOWA II</h2>
           <div className={styles.SliderTabsContainer}>
-            <p className={styles.SliderTabName} onClick={() => setSlider("investment")}>
+            <p
+              className={slider === "investment" ? styles.SliderTabNameActive : styles.SliderTabName}
+              onClick={() => setSlider("investment")}>
               osiedle
             </p>
-            <p className={styles.SliderTabName} onClick={() => setSlider("localization")}>
+            <p
+              className={slider === "localization" ? styles.SliderTabNameActive : styles.SliderTabName}
+              onClick={() => setSlider("localization")}>
               okolica
             </p>
-            <p className={styles.SliderTabName} onClick={() => setSlider("interior")}>
+            <p
+              className={slider === "interior" ? styles.SliderTabNameActive : styles.SliderTabName}
+              onClick={() => setSlider("interior")}>
               wnętrza
             </p>
           </div>
