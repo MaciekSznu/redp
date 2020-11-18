@@ -36,7 +36,7 @@ class TopMenu extends React.Component {
   render() {
     const mobileMenuHidden = !this.state.displayMobileMenu && this.state.width < 768;
     const mobileMenuOpen = this.state.displayMobileMenu && this.state.width < 768;
-    const desktopMenuOpen = this.state.width >= 768;
+    // const desktopMenuOpen = this.state.width >= 768;
 
     const topMenuWrapperStyle = () => {
       if (mobileMenuHidden) {

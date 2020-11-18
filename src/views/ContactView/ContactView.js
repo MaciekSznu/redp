@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./ContactView.module.scss";
 import { ReactComponent as CallIcon } from "../../assets/icons/call-icon.svg";
 import { ReactComponent as MessageIcon } from "../../assets/icons/message-icon.svg";
@@ -20,22 +21,28 @@ const ContactView = () => {
         <div className={styles.ContactIconsContainer}>
           <h3 className={styles.ContactSubTitle}>wybierz najlepszą formę kontaktu</h3>
           <div className={styles.IconWrapper}>
-            <div className={styles.Icon}>
-              <CallIcon className={styles.IconBackground} />
-            </div>
-            <p className={styles.IconTitle}>porozmawiaj</p>
+            <a href="tel:+48602755332">
+              <div className={styles.Icon}>
+                <CallIcon className={styles.IconBackground} />
+              </div>
+              <p className={styles.IconTitle}>porozmawiaj</p>
+            </a>
           </div>
           <div className={styles.IconWrapper}>
-            <div className={styles.Icon}>
-              <MessageIcon className={styles.IconBackground} />
-            </div>
-            <p className={styles.IconTitle}>napisz</p>
+            <Link to="/contact">
+              <div className={styles.Icon}>
+                <MessageIcon className={styles.IconBackground} />
+              </div>
+              <p className={styles.IconTitle}>napisz</p>
+            </Link>
           </div>
           <div className={styles.IconWrapper}>
-            <div className={styles.Icon}>
-              <OnlineIcon className={styles.IconBackground} />
-            </div>
-            <p className={styles.IconTitle}>zobacz</p>
+            <Link to="/video">
+              <div className={styles.Icon}>
+                <OnlineIcon className={styles.IconBackground} />
+              </div>
+              <p className={styles.IconTitle}>zobacz</p>
+            </Link>
           </div>
         </div>
         <div className={styles.ContentWrapperBottom}>

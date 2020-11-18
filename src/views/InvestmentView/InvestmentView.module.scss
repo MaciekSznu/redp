@@ -431,11 +431,14 @@
     }
   }
 
-  .ScheduleButton {
-    @include button-secondary;
+  a {
+    text-decoration: none;
+    .ScheduleButton {
+      @include button-secondary;
 
-    @media screen and (max-width: 768px) {
-      margin: 0 auto;
+      @media screen and (max-width: 768px) {
+        margin: 0 auto;
+      }
     }
   }
 }

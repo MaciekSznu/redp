@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./InvestmentView.module.scss";
 import { ReactComponent as GreenHexagon } from "../../assets/helpers/hexagon-green.svg";
 import { ReactComponent as FlatIcon } from "../../assets/icons/flat-icon.svg";
@@ -138,7 +139,9 @@ const InvestmentView = () => {
           Chcesz poznać więcej szczegółów naszej inwestycji? Zapoznaj się z przewidywanem planem realizacji oraz
           przeczytaj najnowsze aktualności.
         </p>
-        <button className={styles.ScheduleButton}>zobacz harmonogram inwestycji</button>
+        <Link to="/schedule">
+          <button className={styles.ScheduleButton}>zobacz harmonogram inwestycji</button>
+        </Link>
       </div>
     </>
   );

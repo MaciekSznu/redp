@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./CompanyView.module.scss";
 import { ReactComponent as HexagonSecondary } from "../../assets/icons/hexagon-secondary.svg";
 import { ReactComponent as HexagonsMask } from "../../assets/helpers/hexagons-mask.svg";
@@ -79,7 +80,9 @@ const CompanyView = () => {
             Finalny efekt naszych inwestyacji to połączenie doświadczenia, pasji i zaangażowania. To wynik
             profesjonalnej analizy i wieloetapowych przygotowań, które pozwalają nam tworzyć przemyślaną wizję.
           </p>
-          <button className={styles.CompanyButton}>poznaj nasze inwestycje</button>
+          <Link to="/investor">
+            <button className={styles.CompanyButton}>poznaj nasze inwestycje</button>
+          </Link>
         </div>
       </div>
     </>

@@ -176,8 +176,11 @@
         font-weight: 500;
       }
     }
-    .CompanyButton {
-      @include button-secondary;
+    a {
+      text-decoration: none;
+      .CompanyButton {
+        @include button-secondary;
+      }
     }
 
     @media screen and (max-width: 768px) {
