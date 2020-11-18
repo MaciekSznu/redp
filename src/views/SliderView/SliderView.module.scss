@@ -48,43 +48,14 @@
           grid-area: third;
         }
 
-        &:before {
-          position: absolute;
-          content: "";
-          height: 4px;
-          width: 208px;
-          bottom: -24px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: $dark-grey;
-          border-radius: 4px;
-          transition: background 1s ease-out;
-        }
-        &:after {
-          position: absolute;
-          content: "";
-          left: 50%;
-          bottom: -60px;
-          width: 0;
-          height: 0;
-          transform: translateX(-50%);
-          border-style: solid;
-          border-width: 40px 75px 0 75px;
-          border-color: $dark-grey transparent transparent transparent;
-          transition: border-color 1s ease-out;
-        }
+        @include tab-triangle;
       }
 
       .SliderTabNameActive {
         @extend .SliderTabName;
         font-weight: 700;
 
-        &:before {
-          background: $base-green;
-        }
-        &:after {
-          border-color: $base-green transparent transparent transparent;
-        }
+        @include tab-triangle-active;
       }
     }
   }

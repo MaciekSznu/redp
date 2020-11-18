@@ -139,3 +139,59 @@
     letter-spacing: $medium-letter-spacing;
   }
 }
+
+@mixin tab-triangle {
+  &:before {
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 208px;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $dark-grey;
+    border-radius: 4px;
+    transition: background 1s ease-out;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -60px;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 40px 75px 0 75px;
+    border-color: $dark-grey transparent transparent transparent;
+    transition: border-color 1s ease-out;
+  }
+}
+
+@mixin tab-triangle-active {
+  &:before {
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 208px;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $base-green;
+    border-radius: 4px;
+    transition: background 1s ease-out;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -60px;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 40px 75px 0 75px;
+    border-color: $base-green transparent transparent transparent;
+    transition: border-color 1s ease-out;
+  }
+}
