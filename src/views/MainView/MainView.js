@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import TopMenu from "../../components/Header/TopMenu";
 import ContactSideBar from "../../components/ContactSideBar/ContactSideBar";
 import HeroView from "../HeroView/HeroView";
@@ -7,7 +7,7 @@ import LocationView from "../LocationView/LocationView";
 import FlatsView from "../FlatsView/FlatsView";
 import CompanyView from "../CompanyView/CompanyView";
 import ContactView from "../ContactView/ContactView";
-import SliderView from '../SliderView/SliderView';
+import SliderView from "../SliderView/SliderView";
 import FooterView from "../FooterView/FooterView";
 import FiltersView from "../FiltersView/FiltersView";
 

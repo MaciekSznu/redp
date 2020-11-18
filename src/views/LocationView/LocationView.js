@@ -13,7 +13,6 @@ import { ReactComponent as DoctorIcon } from "../../assets/icons/doctor-icon.svg
 import { ReactComponent as EducationIcon } from "../../assets/icons/education-icon.svg";
 import { ReactComponent as HexagonSeeMore } from "../../assets/helpers/hexagon-see-more.svg";
 
-
 // import { ReactComponent as QuaotationMark } from "../../assets/helpers/quotation-mark.svg";
 
 const LocationView = () => {
@@ -43,7 +42,12 @@ const LocationView = () => {
           <h3 className={styles.LocationSubTitle}>poznaj okolicę</h3>
           <div className={styles.FullWidthMap}></div>
           <div className={styles.ButtonWrapper}>
-            <button className={styles.LocationButton}>zobacz w google maps</button>
+            <a
+              href="https://www.google.pl/maps/place/50%C2%B002'03.5%22N+19%C2%B053'56.2%22E/@50.034309,19.8967557,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d50.0342981!4d19.8989312"
+              target="_blank"
+              rel="noopener noreferrer">
+              <button className={styles.LocationButton}>zobacz w google maps</button>
+            </a>
           </div>
         </div>
         <div className={styles.LocationAttributesContainer}>
@@ -76,7 +80,7 @@ const LocationView = () => {
           <div className={styles.LocationAttributesAdditional}>
             <details className={styles.LocationAttributesDetails}>
               <summary className={styles.LocationAttributesSummary}>
-                <HexagonSeeMore className={styles.LocationAttributesIcon}/>
+                <HexagonSeeMore className={styles.LocationAttributesIcon} />
               </summary>
               <div className={styles.LocationAttributesSecondary}>
                 <div className={styles.IconWrapper01}>
@@ -98,7 +102,9 @@ const LocationView = () => {
                 <div className={styles.DescriptionWrapper}>
                   <h3 className={styles.DescriptionHeader}>KORZYSTAJ Z UROKÓW MIASTA</h3>
                   <p className={styles.DescriptionText}>
-                  W okolicy znajdziesz również najbardziej popularne lokale handlowo-usługowe oraz <strong>Galerię Handlową</strong>. Bez problemu znajdziesz także liczne siłownie i najbardziej popularne kluby fitness.
+                    W okolicy znajdziesz również najbardziej popularne lokale handlowo-usługowe oraz{" "}
+                    <strong>Galerię Handlową</strong>. Bez problemu znajdziesz także liczne siłownie i najbardziej
+                    popularne kluby fitness.
                   </p>
                 </div>
               </div>
@@ -122,7 +128,9 @@ const LocationView = () => {
                 <div className={styles.DescriptionWrapper}>
                   <h3 className={styles.DescriptionHeader}>ZDROWIE I EDUKACJA w sąsiedztwie</h3>
                   <p className={styles.DescriptionText}>
-                  W dzielnicy zlokalizowane są liczne prywatne i państwowe <strong>placówki służby zdrowia</strong>, w tym <strong>gabinety dentystyczne i fizjoterapeutyczne</strong>. W sąsiedztwie znajdziesz również <strong>żłobki, przedszkola</strong> oraz <strong>szkoły podstawowe i średnie</strong>.
+                    W dzielnicy zlokalizowane są liczne prywatne i państwowe <strong>placówki służby zdrowia</strong>, w
+                    tym <strong>gabinety dentystyczne i fizjoterapeutyczne</strong>. W sąsiedztwie znajdziesz również{" "}
+                    <strong>żłobki, przedszkola</strong> oraz <strong>szkoły podstawowe i średnie</strong>.
                   </p>
                 </div>
               </div>

@@ -128,8 +128,13 @@
       height: 90px;
       display: flex;
       align-items: center;
-      .LocationButton {
-        @include button-secondary;
+
+      a {
+        text-decoration: none;
+
+        .LocationButton {
+          @include button-secondary;
+        }
       }
     }
   }
@@ -299,7 +304,8 @@
           }
         }
 
-        .LocationAttributesSecondary, .LocationAttributesSecondary02 {
+        .LocationAttributesSecondary,
+        .LocationAttributesSecondary02 {
           @extend .LocationAttributesMain;
           margin-top: 48px;
         }
