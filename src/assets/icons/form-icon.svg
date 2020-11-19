@@ -1,0 +1,40 @@
+<svg width="162" height="161" viewBox="0 0 162 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path opacity="0.8"
+    d="M79.0186 2.12593C80.2467 1.42563 81.7533 1.42563 82.9814 2.12593L149.129 39.845C150.378 40.5567 151.148 41.8831 151.148 43.3198V118.672C151.148 120.109 150.378 121.435 149.129 122.147L82.9814 159.866C81.7533 160.567 80.2467 160.567 79.0186 159.866L12.8705 122.147C11.6225 121.435 10.8519 120.109 10.8519 118.672V43.3198C10.8519 41.8831 11.6225 40.5567 12.8705 39.845L79.0186 2.12593Z"
+    fill="#669C95" />
+  <path
+    d="M79.7627 10.427C80.5297 9.99016 81.4703 9.99016 82.2373 10.427L142.323 44.6488C143.104 45.0934 143.586 45.9228 143.586 46.8212V115.171C143.586 116.069 143.104 116.899 142.323 117.343L82.2373 151.565C81.4703 152.002 80.5297 152.002 79.7627 151.565L19.6769 117.343C18.8962 116.899 18.4141 116.069 18.4141 115.171V46.8212C18.4141 45.9228 18.8962 45.0934 19.6769 44.6488L79.7627 10.427Z"
+    fill="#669C95" stroke="white" stroke-width="3" />
+  <rect x="48.34" y="48.34" width="65.32" height="65.32" rx="6.35133" fill="#669C95" stroke="#364859"
+    stroke-width="2.68" />
+  <mask id="form_path-4-inside-1" fill="white">
+    <rect width="6.67752" height="12.4011" rx="0.810045" transform="matrix(-1 0 0 1 88.9727 93.2842)" />
+  </mask>
+  <rect width="6.67752" height="12.4011" rx="0.810045" transform="matrix(-1 0 0 1 88.9727 93.2842)" stroke="#364859"
+    stroke-width="4" mask="url(#form_path-4-inside-1)" />
+  <mask id="form_path-5-inside-2" fill="white">
+    <rect width="6.67752" height="17.1708" rx="0.810045" transform="matrix(-1 0 0 1 106.145 88.5146)" />
+  </mask>
+  <rect width="6.67752" height="17.1708" rx="0.810045" transform="matrix(-1 0 0 1 106.145 88.5146)" stroke="#364859"
+    stroke-width="4" mask="url(#form_path-5-inside-2)" />
+  <mask id="form_path-6-inside-3" fill="white">
+    <rect width="6.67752" height="24.8022" rx="0.810045" transform="matrix(-1 0 0 1 97.5586 80.8838)" />
+  </mask>
+  <rect width="6.67752" height="24.8022" rx="0.810045" transform="matrix(-1 0 0 1 97.5586 80.8838)" stroke="#364859"
+    stroke-width="4" mask="url(#form_path-6-inside-3)" />
+  <mask id="form_path-7-inside-4" fill="white">
+    <rect x="54.6328" y="56.0811" width="39.1112" height="12.4011" rx="0.810045" />
+  </mask>
+  <rect x="54.6328" y="56.0811" width="39.1112" height="12.4011" rx="0.810045" stroke="#364859" stroke-width="4"
+    mask="url(#form_path-7-inside-4)" />
+  <mask id="form_path-8-inside-5" fill="white">
+    <rect x="54.6328" y="72.2979" width="22.4091" height="33.2273" rx="0.810045" />
+  </mask>
+  <rect x="54.6328" y="72.2979" width="22.4091" height="33.2273" rx="0.810045" stroke="white" stroke-width="4"
+    mask="url(#form_path-8-inside-5)" />
+  <mask id="form_path-9-inside-6" fill="white">
+    <rect width="8.58538" height="12.4011" rx="0.810045" transform="matrix(-1 0 0 1 106.145 56.0811)" />
+  </mask>
+  <rect width="8.58538" height="12.4011" rx="0.810045" transform="matrix(-1 0 0 1 106.145 56.0811)" stroke="#364859"
+    stroke-width="4" mask="url(#form_path-9-inside-6)" />
+</svg>

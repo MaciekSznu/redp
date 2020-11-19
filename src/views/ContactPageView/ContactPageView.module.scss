@@ -1,0 +1,590 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.contactPageWrapper {
+  grid-area: hero;
+  .sectionTitle {
+    @include section-title;
+    margin: 140px 0 80px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .sectionParagraph {
+    @include base-paragraph;
+  }
+
+  .sectionSubTitle {
+    @include section-sub-title;
+    font-size: 32px;
+    margin: 96px 0 24px;
+    text-align: left;
+  }
+
+  .salesOfficeBanner {
+    position: relative;
+    margin: 60px 0 160px;
+    width: 100%;
+    height: 234px;
+    display: grid;
+    grid-template-columns: 296px 296px auto;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas: "left center right";
+    background: $base-grey;
+
+    .adressTextWrapper {
+      position: relative;
+      grid-area: left;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 48px;
+
+      .adress,
+      .openingHours {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: $small-letter-spacing;
+        color: $base-dark;
+        margin: 0 0 8px 0;
+      }
+
+      .openingHours {
+        margin-top: 40px;
+      }
+
+      .city,
+      .hours {
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: $small-letter-spacing;
+        color: $base-dark;
+        margin: 0;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 16px;
+        height: 202px;
+        width: 2px;
+        border-radius: 2px;
+        background: $dark-grey;
+      }
+    }
+
+    .agentTextWrapper {
+      @extend .adressTextWrapper;
+      grid-area: center;
+
+      .name,
+      .contact {
+        @extend .adress;
+      }
+
+      .function,
+      .phoneNumber {
+        @extend .city;
+      }
+
+      .function {
+        text-transform: uppercase;
+      }
+      .contact {
+        @extend .openingHours;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .salesOfficeHexagons {
+      position: absolute;
+      right: 77px;
+      z-index: 2;
+    }
+  }
+
+  .contactFormSection {
+    .sectionSubTitle {
+      @include section-sub-title;
+      font-size: 32px;
+      margin: 96px 0 24px;
+      text-align: left;
+    }
+
+    .sectionParagraph {
+      @include base-paragraph;
+    }
+
+    .contactFormWrapper {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: auto 633px;
+      grid-template-rows: auto;
+      grid-template-areas: "left right";
+
+      .contactData {
+        grid-area: left;
+      }
+
+      .contactData {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .logo {
+          margin-bottom: 60px;
+        }
+
+        .adressWrapper,
+        .socialWrapper {
+          margin: 32px 0;
+        }
+
+        .adressWrapper {
+          .street,
+          .city,
+          .phone,
+          .email {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 8px;
+          }
+
+          .city {
+            margin-bottom: 40px;
+          }
+        }
+
+        .socialWrapper {
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 8px;
+
+          .facebook,
+          .twitter {
+            margin-right: 48px;
+          }
+        }
+
+        .icon {
+          margin-top: 60px;
+        }
+      }
+
+      .contactForm {
+        width: 100%;
+        grid-area: right;
+        display: flex;
+        justify-content: stretch;
+
+        .formLabel {
+          display: block;
+          font-size: 18px;
+          text-transform: uppercase;
+          margin: 16px 0 8px;
+          color: $base-dark;
+          font-weight: 700;
+        }
+
+        .formTextInput {
+          height: 58px;
+          width: 100%;
+          padding: 16px 24px;
+          font-size: 16px;
+          letter-spacing: $medium-letter-spacing;
+          color: $base-dark;
+          flex-grow: 3;
+          border: 2px solid rgba(54, 72, 89, 0.1);
+          border-radius: 4px;
+
+          &::placeholder {
+            color: rgba(54, 72, 89, 0.15);
+            font-family: $base-font;
+            font-size: 18px;
+            letter-spacing: $medium-letter-spacing;
+            text-transform: uppercase;
+          }
+        }
+
+        .formTextArea {
+          @extend .formTextInput;
+          height: 215px;
+          resize: none;
+        }
+
+        .sendSection {
+          display: flex;
+          justify-content: stretch;
+          margin-top: 32px;
+          position: relative;
+          margin-bottom: 56px;
+
+          .rodoCheckbox {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+
+          .rodoCustomCheckbox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            margin-right: 14px;
+            border: 2px solid rgba(54, 72, 89, 0.1);
+            border-radius: 1px;
+          }
+
+          .rodoCheckboxLabel {
+            padding-left: 38px;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 300;
+            letter-spacing: $small-letter-spacing;
+          }
+        }
+        .formButton {
+          width: 100%;
+          @include button-primary;
+          height: 58px;
+          line-height: 58px;
+          border-radius: 4px;
+          font-size: 16px;
+          font-weight: 700;
+          padding: 0 16px;
+        }
+      }
+    }
+  }
+
+  .videoContactWrapper {
+    .sectionSubTitle {
+      @include section-sub-title;
+      font-weight: 600;
+      letter-spacing: $small-letter-spacing;
+      margin-bottom: 56px;
+    }
+
+    .sectionParagraph {
+      @include base-paragraph;
+    }
+
+    .iconsContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 0px 0px;
+      grid-template-areas:
+        "title title title"
+        "first second third";
+      margin-bottom: 50px;
+      margin-top: 50px;
+
+      .iconsSubTitle {
+        grid-area: title;
+        @include section-sub-title;
+        font-size: 24px;
+        margin-bottom: 64px;
+        text-transform: uppercase;
+      }
+
+      .iconWrapper {
+        margin: 8px 0;
+        grid-area: first;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+        }
+
+        .iconTitle {
+          margin-top: 30px;
+          margin-bottom: 0;
+          font-size: 18px;
+          color: $base-dark;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: $small-letter-spacing;
+        }
+
+        &:nth-of-type(2) {
+          grid-area: second;
+        }
+
+        &:nth-of-type(3) {
+          grid-area: third;
+        }
+      }
+    }
+
+    .onlineMeetingWrapper {
+      .sectionSubTitle {
+        @include section-sub-title;
+        margin-top: 160px;
+        font-size: 32px;
+
+        span {
+          font-size: 64px;
+          color: $base-green;
+        }
+      }
+
+      .onlineMeetingFormWrapper {
+        display: grid;
+        grid-template-columns: auto 715px;
+        grid-template-rows: auto;
+        grid-template-areas: "left right";
+        border-radius: 4px;
+
+        .contactData {
+          grid-area: left;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 48px;
+          background: $base-grey;
+
+          .step {
+            width: 100%;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 8px;
+            text-align: left;
+          }
+
+          .iconImage {
+            margin: 40px auto 30px;
+          }
+
+          .iconTitle {
+            font-size: 20px;
+            font-weight: 700;
+          }
+
+          .text {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 30px 0 0;
+          }
+        }
+
+        .contactForm {
+          width: 100%;
+          grid-area: right;
+          display: flex;
+          justify-content: stretch;
+          background: $base-grey;
+          padding: 48px;
+
+          .formLabel {
+            display: block;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin: 16px 0 8px;
+            color: $base-dark;
+            font-weight: 700;
+          }
+
+          .formTextInput {
+            height: 58px;
+            width: 100%;
+            padding: 16px 24px;
+            font-size: 16px;
+            letter-spacing: $medium-letter-spacing;
+            color: $base-dark;
+            flex-grow: 3;
+            border: 2px solid rgba(54, 72, 89, 0.1);
+            border-radius: 4px;
+
+            &::placeholder {
+              color: rgba(54, 72, 89, 0.15);
+              font-family: $base-font;
+              font-size: 18px;
+              letter-spacing: $medium-letter-spacing;
+              text-transform: uppercase;
+            }
+          }
+
+          .sendSection {
+            display: flex;
+            justify-content: stretch;
+            margin-top: 32px;
+            position: relative;
+            margin-bottom: 56px;
+
+            .rodoCheckbox {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+            }
+
+            .rodoCustomCheckbox {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 24px;
+              height: 24px;
+              margin-right: 14px;
+              border: 2px solid rgba(54, 72, 89, 0.1);
+              border-radius: 1px;
+            }
+
+            .rodoCheckboxLabel {
+              padding-left: 38px;
+              font-size: 14px;
+              line-height: 21px;
+              font-weight: 300;
+              letter-spacing: $small-letter-spacing;
+            }
+          }
+          .formButton {
+            width: 100%;
+            @include button-primary;
+            height: 58px;
+            line-height: 58px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 0 16px;
+          }
+        }
+      }
+
+      .onlineMeetingSelect {
+        @extend .onlineMeetingFormWrapper;
+        margin-bottom: 20px;
+
+        .selectWrapper {
+          width: 100%;
+          grid-area: right;
+          background: $base-grey;
+          padding: 24px 20px 24px 0;
+
+          .selectBox {
+            width: 100%;
+            height: 100%;
+            background: $white;
+
+            .month {
+              display: block;
+              font-size: 24px;
+              font-weight: 700;
+              text-transform: uppercase;
+              width: 100%;
+              height: 64px;
+              line-height: 64px;
+              text-align: center;
+              margin: 0;
+              padding-top: 16px;
+            }
+
+            .days {
+              margin-bottom: 8px;
+              margin-top: 16px;
+              display: grid;
+              grid-template-columns: 75px repeat(5, 1fr) 75px;
+              grid-template-rows: 50px;
+              grid-gap: 8px 8px;
+              grid-template-areas: "prev mon tue wen thu fri next";
+              span {
+                grid-area: mon;
+                text-align: center;
+                align-self: center;
+                font-size: 24px;
+                font-weight: 400;
+
+                &:nth-of-type(2) {
+                  grid-area: tue;
+                }
+                &:nth-of-type(3) {
+                  grid-area: wen;
+                }
+                &:nth-of-type(4) {
+                  grid-area: thu;
+                }
+                &:nth-of-type(5) {
+                  grid-area: fri;
+                }
+              }
+
+              .prev {
+                grid-area: prev;
+                justify-self: center;
+                align-self: center;
+              }
+
+              .next {
+                grid-area: next;
+                transform: rotate(180deg);
+                transform-origin: center;
+                justify-self: center;
+                align-self: center;
+              }
+            }
+            .date {
+              margin-bottom: 8px;
+              display: grid;
+              grid-template-columns: 75px repeat(5, 1fr) 75px;
+              grid-template-rows: 50px;
+              grid-gap: 0 8px;
+              grid-template-areas: ". day-01 day-02 day-03 day-04 day-05 .";
+
+              span {
+                grid-area: day-01;
+                text-align: center;
+                align-self: center;
+                font-size: 20px;
+                font-weight: 400;
+
+                &:nth-of-type(2) {
+                  grid-area: day-02;
+                }
+                &:nth-of-type(3) {
+                  grid-area: day-03;
+                }
+                &:nth-of-type(4) {
+                  grid-area: day-04;
+                }
+                &:nth-of-type(5) {
+                  grid-area: day-05;
+                }
+              }
+            }
+            .hour9,
+            .hour11,
+            .hour13,
+            .hour15 {
+              @extend .date;
+
+              span {
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                border-radius: 2px;
+                font-size: 18px;
+                background: $base-grey;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
