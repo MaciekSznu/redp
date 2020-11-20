@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./InvestorPageView.module.scss";
 import FooterView from "../FooterView/FooterView";
-
 import { ReactComponent as InvestmentIcon } from "../../assets/icons/investment-archive-icon.svg";
+import investment01Image from "../../assets/images/archive_investments/investment_01_521_415.jpg";
+import investment02Image from "../../assets/images/archive_investments/investment_02_521_415.jpg";
+import investment03Image from "../../assets/images/archive_investments/investment_03_521_415.jpg";
 
 // import { Link } from "react-router-dom";
 
@@ -14,7 +16,7 @@ const investmentsData = [
     services: "2 lokale usługowe",
     garages: "24 garaże podziemne",
     parking: "6 miejsc postojowych",
-    imageUrl: "url(../../assets/images/archive_investments/investment_01_521_415.jpg)",
+    imageUrl: investment01Image,
   },
   {
     name: "osiedle przy parku",
@@ -23,7 +25,7 @@ const investmentsData = [
     services: "6 lokali usługowych",
     garages: "40 garaży podziemnych",
     parking: "10 miejsc postojowych",
-    imageUrl: "url(../../assets/images/archive_investments/investment_02_521_415.jpg)",
+    imageUrl: investment02Image,
   },
   {
     name: "zielona enklawa",
@@ -32,12 +34,11 @@ const investmentsData = [
     services: "7 lokali usługowych",
     garages: "60 garaży podziemnych",
     parking: "16 miejsc postojowych",
-    imageUrl: "url(../../assets/images/archive_investments/investment_03_521_415.jpg)",
+    imageUrl: investment03Image,
   },
 ];
 
 const renderInvestments = () => {
-  console.log(investmentsData);
   return investmentsData.map((investment, index) => {
     const { name, description, flats, services, garages, parking, imageUrl } = investment;
     return (
@@ -53,7 +54,7 @@ const renderInvestments = () => {
           <h3 className={styles.investmentParametersPrimary}>{garages}</h3>
           <h4 className={styles.investmentParametersSecondary}>{parking}</h4>
         </div>
-        <div className={styles.investmentImage} style={{ background: { imageUrl } }}></div>
+        <div className={styles.investmentImage} style={{ background: `url(${imageUrl})` }}></div>
       </section>
     );
   });
