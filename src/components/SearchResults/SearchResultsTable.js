@@ -31,8 +31,32 @@ class SearchResultsTable extends React.Component {
     this.setState({ width: window.innerWidth, height: window.innerHeight });
   };
 
-  isBalconyOrTerrace = (item) => {
-    return item === true ? "\u2022" : "";
+  isBalconyOrTerrace = (flat) => {
+    return flat === "" ? "" : flat;
+  };
+
+  formatPrice = (price) => {
+    return price.toLocaleString();
+  };
+
+  translateStatus = (status) => {
+    if (status === "for sale") {
+      return "Dostępne";
+    } else if (status === "reserved") {
+      return "Rezerwacja";
+    } else if (status === "sold") {
+      return "Sprzedane";
+    }
+  };
+
+  setStatusColor = (status) => {
+    if (status === "for sale") {
+      return { color: "#56928a" };
+    } else if (status === "reserved") {
+      return { color: "#F8CE81" };
+    } else if (status === "sold") {
+      return { color: "#E0777D" };
+    }
   };
 
   filterFlatsArray(props) {
@@ -59,16 +83,16 @@ class SearchResultsTable extends React.Component {
           (this.props.filters.selectedPrice.max !== undefined ? this.props.filters.selectedPrice.max : maxPriceValue) &&
         el.price >=
           (this.props.filters.selectedPrice.min !== undefined ? this.props.filters.selectedPrice.min : minPriceValue) &&
-        el.balcony !== "" &&
-        el.terrace !== "" &&
-        el.status === "for sale"
+        el.balcony !== ""
+        // &&
+        // el.status === "for sale"
       );
     });
   }
 
   renderSearchResults() {
     return this.filterFlatsArray().map((flat) => {
-      const { buildingNumber, flatNumber, floor, rooms, area, balcony, terrace, price, status, chart } = flat;
+      const { buildingNumber, flatNumber, floor, rooms, area, balcony, price, status, chart } = flat;
       if (this.state.width >= 768) {
         return (
           <>
@@ -81,13 +105,12 @@ class SearchResultsTable extends React.Component {
               {" m"}
               <sup>{"2"}</sup>
             </td>
-            {this.state.width >= 930 && <td>{this.isBalconyOrTerrace(balcony)}</td>}
-            {this.state.width >= 930 && <td>{this.isBalconyOrTerrace(terrace)}</td>}
             <td>
-              {price}
+              {this.formatPrice(price)}
               {" zł"}
             </td>
-            {this.state.width >= 930 && <td>{status}</td>}
+            <td style={this.setStatusColor(status)}>{this.translateStatus(status)}</td>
+            <td className={styles.tableDataBalcony}>{this.isBalconyOrTerrace(balcony)}</td>
             <td>{chart}</td>
           </>
         );
@@ -110,7 +133,7 @@ class SearchResultsTable extends React.Component {
             </div>
             <div className={styles.FlatBoxChapter}>
               <div className={styles.FlatBoxText}>
-                <h3 className={styles.FlatBoxHeader}>{price} zł</h3>
+                <h3 className={styles.FlatBoxHeader}>{this.formatPrice(price)} zł</h3>
                 <p className={styles.FlatBoxParagraph}>{status}</p>
               </div>
               <div className={styles.FlatBoxIcon}>
@@ -125,28 +148,19 @@ class SearchResultsTable extends React.Component {
 
   renderSearchResultsHeader() {
     const header =
-      this.state.width >= 930
+      this.state.width >= 768
         ? {
             buildingNumber: "budynek",
             flatNumber: "mieszkanie",
             floor: "piętro",
             rooms: "pokoje",
-            area: "powierzchnia",
-            balcony: "balkon",
-            terrace: "taras",
+            area: "metraż",
             price: "cena",
             status: "status",
+            balcony: "balkon",
             chart: "karta",
           }
-        : {
-            buildingNumber: "budynek",
-            flatNumber: "mieszkanie",
-            floor: "piętro",
-            rooms: "pokoje",
-            area: "powierzchnia",
-            price: "cena",
-            chart: "karta",
-          };
+        : null;
 
     const headerValues = Object.values(header);
     return headerValues.map((value, index) => {
@@ -156,7 +170,7 @@ class SearchResultsTable extends React.Component {
 
   render() {
     const numberOfflats = this.filterFlatsArray().length;
-    const perPage = this.state.width >= 768 ? 10 : 5;
+    const perPage = this.state.width >= 768 ? 8 : 4;
     const pages = Math.ceil(numberOfflats / perPage);
     const from = (this.state.page - 1) * perPage;
     const to = this.state.page * perPage;
@@ -192,7 +206,8 @@ class SearchResultsTable extends React.Component {
             <>
               <h3 className={styles.searchResultsTitle}>Wybrane dla Ciebie</h3>
               <p className={styles.searchResultsText}>
-                <span>({numberOfflats})</span> dostępnych mieszkań</p>
+                <span>({numberOfflats})</span> dostępnych mieszkań
+              </p>
               {flatsToShow}
             </>
           )}
