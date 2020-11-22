@@ -1,5 +1,6 @@
 import React from "react";
 import HomePageLink from "../../components/Header/HomePageLink";
+import ScrollToTop from "../../components/Helpers/ScrollToTop";
 import styles from "./ContactPageView.module.scss";
 import FooterView from "../FooterView/FooterView";
 import { ReactComponent as HexagonLocalization } from "../../assets/helpers/hexagons-localization.svg";
@@ -18,6 +19,7 @@ import { ReactComponent as CalendarArrow } from "../../assets/icons/calendar-arr
 const ContactPageView = () => {
   return (
     <>
+      <ScrollToTop />
       <HomePageLink />
       <article className={styles.contactPageWrapper}>
         <h1 className={styles.sectionTitle}>skontaktuj się z nami</h1>

@@ -1,6 +1,7 @@
 import React from "react";
 import FooterView from "../FooterView/FooterView";
 import HomePageLink from "../../components/Header/HomePageLink";
+import ScrollToTop from "../../components/Helpers/ScrollToTop";
 import styles from "./SchedulePageView.module.scss";
 import { ReactComponent as Schedule01 } from "../../assets/icons/schedule/schedule_01.svg";
 import { ReactComponent as Schedule02 } from "../../assets/icons/schedule/schedule_02.svg";
@@ -19,6 +20,7 @@ import { ReactComponent as Schedule13 } from "../../assets/icons/schedule/schedu
 const SchedulePageView = () => {
   return (
     <>
+      <ScrollToTop />
       <HomePageLink />
       <section className={styles.schedulePageWrapper}>
         <h1 className={styles.sectionTitle}>Sprawdź co u nas słychać</h1>
