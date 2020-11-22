@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import HomePageLink from "../../components/Header/HomePageLink";
 import styles from "./ContactPageView.module.scss";
 import FooterView from "../FooterView/FooterView";
 import { ReactComponent as HexagonLocalization } from "../../assets/helpers/hexagons-localization.svg";
@@ -18,6 +18,7 @@ import { ReactComponent as CalendarArrow } from "../../assets/icons/calendar-arr
 const ContactPageView = () => {
   return (
     <>
+      <HomePageLink />
       <article className={styles.contactPageWrapper}>
         <h1 className={styles.sectionTitle}>skontaktuj się z nami</h1>
         <p className={styles.sectionParagraph}>
@@ -136,7 +137,6 @@ const ContactPageView = () => {
             </div>
           </div>
         </section>
-        {/* <Link to="/">home</Link> */}
         <section className={styles.videoContactWrapper}>
           <h2 className={styles.sectionSubTitle}>umów śię na prezentację mieszkania</h2>
           <p className={styles.sectionParagraph}>

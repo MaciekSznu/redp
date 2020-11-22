@@ -1,12 +1,12 @@
 import React from "react";
+// import { Link } from "react-router-dom";
 import styles from "./InvestorPageView.module.scss";
+import HomePageLink from "../../components/Header/HomePageLink";
 import FooterView from "../FooterView/FooterView";
 import { ReactComponent as InvestmentIcon } from "../../assets/icons/investment-archive-icon.svg";
 import investment01Image from "../../assets/images/archive_investments/investment_01_521_415.jpg";
 import investment02Image from "../../assets/images/archive_investments/investment_02_521_415.jpg";
 import investment03Image from "../../assets/images/archive_investments/investment_03_521_415.jpg";
-
-// import { Link } from "react-router-dom";
 
 const investmentsData = [
   {
@@ -63,13 +63,12 @@ const renderInvestments = () => {
 const InvestorPageView = () => {
   return (
     <>
+      <HomePageLink />
       <article className={styles.investorPageWrapper}>
         <h1 className={styles.sectionTitle}>Tak budowaliśmy nasze doświadczenie</h1>
         {renderInvestments()}
       </article>
       <FooterView />
-
-      {/* <Link to="/">home</Link> */}
     </>
   );
 };
