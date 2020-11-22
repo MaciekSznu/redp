@@ -5,15 +5,18 @@
     margin-top: 56px;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 
     .searchResultTable {
       width: 100%;
       text-align: center;
       border-collapse: collapse;
       padding: 0 2rem;
+      box-sizing: border-box;
 
       .searchResultTableHeader {
         th {
+          box-sizing: border-box;
           height: 60px;
           color: $white;
           font-family: $base-font;
@@ -21,13 +24,16 @@
           font-size: 18px;
           letter-spacing: $small-letter-spacing;
           background-color: $light-green;
+          border: 3px solid $light-green;
         }
       }
 
       .searchResultTableRow {
         cursor: pointer;
+        box-sizing: border-box;
 
         td {
+          box-sizing: border-box;
           height: 60px;
           color: $base-dark;
           font-family: $base-font;
@@ -44,13 +50,22 @@
         }
       }
 
-      tr:nth-child(even) {
-        background-color: $base-grey;
-      }
+      tr {
+        box-sizing: border-box;
+        border-top: 3px solid transparent;
 
-      // tr:hover {
-      //   background-color: rgba($color-4, 0.2);
-      // }
+        &:nth-child(even) {
+          background-color: $base-grey;
+        }
+        &:last-child {
+          border-bottom: 3px solid transparent;
+        }
+
+        &:hover {
+          border: 3px solid $base-green;
+          border-radius: 1px;
+        }
+      }
     }
   }
 
