@@ -64,7 +64,9 @@ const ContactView = () => {
               <div className={styles.ContactTabAdressRight}>
                 <div className={styles.AdressTop}>
                   <p className={styles.AdressBold}>Telefon</p>
-                  <p className={styles.AdressStandard}>641 278 671</p>
+                  <a className={styles.AdressStandard} href="tel:+48602755332">
+                    602 755 332
+                  </a>
                 </div>
                 <div className={styles.AdressBottom}>
                   <p className={styles.AdressBold}>Godziny pracy</p>

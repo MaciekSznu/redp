@@ -4,13 +4,13 @@ import { ReactComponent as Facebook } from "../../assets/icons/facebook-icon.svg
 import { ReactComponent as Twitter } from "../../assets/icons/twitter-icon.svg";
 import { ReactComponent as Instagram } from "../../assets/icons/instagram-icon.svg";
 
-
 const ContactSideBar = () => {
-
   return (
     <>
       <div className={styles.ContactSideBar}>
-        <a className={styles.PhoneNumber} href="tel:+48122148430">(12) 214 84 30</a>
+        <a className={styles.PhoneNumber} href="tel:+48602755332">
+          602 755 332
+        </a>
         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/" className={styles.Facebook}>
           <Facebook />
         </a>

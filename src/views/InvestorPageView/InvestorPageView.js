@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import ScrollToTop from "../../components/Helpers/ScrollToTop";
 import styles from "./InvestorPageView.module.scss";
 import HomePageLink from "../../components/Header/HomePageLink";
 import FooterView from "../FooterView/FooterView";
@@ -63,6 +63,7 @@ const renderInvestments = () => {
 const InvestorPageView = () => {
   return (
     <>
+      <ScrollToTop />
       <HomePageLink />
       <article className={styles.investorPageWrapper}>
         <h1 className={styles.sectionTitle}>Tak budowaliśmy nasze doświadczenie</h1>

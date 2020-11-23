@@ -70,19 +70,19 @@ class TopMenu extends React.Component {
           </div>
         )}
         <ul className={topMenuWrapperStyle()}>
+          <TopMenuItems openMobileMenu={this.openMobileMenu} />
           {this.state.width < 768 ? (
             <>
               <MobileMenuPattern className={styles.mobileMenuPatternTop} />
               <li className={styles.additionalItem}>
-                <a className={styles.phoneNumber} href="tel:+48122148430">
-                  (12) 214 84 30
+                <a className={styles.phoneNumber} href="tel:+48602755332">
+                  602 755 332
                 </a>
               </li>
               <SocialMenuBanner />
               <MobileMenuPattern className={styles.mobileMenuPatternBottom} />
             </>
           ) : null}
-          <TopMenuItems openMobileMenu={this.openMobileMenu} />
         </ul>
         {/* <div className={styles.scrollToTop}>
           <Link to='hero' smooth={true} duration={1000}>
