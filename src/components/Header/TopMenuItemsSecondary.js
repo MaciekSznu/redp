@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./TopMenuItemsSecondary.module.scss";
+// import { Link } from "react-router-dom";
+// import styles from "./TopMenuItemsSecondary.module.scss";
 
 class TopMenuItemsSecondary extends React.Component {
   render() {
