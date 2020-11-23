@@ -18,7 +18,7 @@ const flatsArray = [
     area: 45,
     price: 405000,
     balcony: "brak",
-    status: "for sale",
+    status: "sold",
     chart: "link",
   },
   {
