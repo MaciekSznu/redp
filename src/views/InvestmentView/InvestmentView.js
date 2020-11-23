@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./InvestmentView.module.scss";
-import { ReactComponent as GreenHexagon } from "../../assets/helpers/hexagon-green.svg";
+// import { ReactComponent as GreenHexagon } from "../../assets/helpers/hexagon-green.svg";
 import { ReactComponent as FlatIcon } from "../../assets/icons/flat-icon.svg";
 import { ReactComponent as AreaIcon } from "../../assets/icons/area-icon.svg";
 import { ReactComponent as PriceIcon } from "../../assets/icons/price-icon.svg";
@@ -55,21 +55,21 @@ const InvestmentView = () => {
         <div className={styles.InvestmentIconsFullWidthContainer}>
           <div className={styles.IconWrapper}>
             <div className={styles.Icon}>
-              <GreenHexagon className={styles.IconBackground} />
+              {/* <GreenHexagon className={styles.IconBackground} /> */}
               <MapIcon className={styles.IconImage} />
             </div>
             <p className={styles.IconTitle}>dobra lokalizacja</p>
           </div>
           <div className={styles.IconWrapper}>
             <div className={styles.Icon}>
-              <GreenHexagon className={styles.IconBackground} />
+              {/* <GreenHexagon className={styles.IconBackground} /> */}
               <InfrastructureIcon className={styles.IconImage} />
             </div>
             <p className={styles.IconTitle}>przyjazna infrastruktura</p>
           </div>
           <div className={styles.IconWrapper}>
             <div className={styles.Icon}>
-              <GreenHexagon className={styles.IconBackground} />
+              {/* <GreenHexagon className={styles.IconBackground} /> */}
               <LayoutIcon className={styles.IconImage} />
             </div>
             <p className={styles.IconTitle}>przemyślany układ</p>
