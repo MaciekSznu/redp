@@ -45,6 +45,7 @@
         .AdressStandard {
           letter-spacing: $medium-letter-spacing;
           color: $base-dark;
+          text-decoration: none;
         }
 
         .AdressBold {
@@ -212,13 +213,16 @@
         justify-content: center;
         background-color: $base-grey;
 
-        .Facebook, .Twitter, .Instagram {
+        .Facebook,
+        .Twitter,
+        .Instagram {
           .Icon {
             width: 24px;
           }
         }
 
-        .Facebook, .Twitter {
+        .Facebook,
+        .Twitter {
           margin-right: 50px;
         }
       }

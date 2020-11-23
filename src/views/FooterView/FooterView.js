@@ -19,7 +19,9 @@ const FooterView = () => {
             <div className={styles.AdressWrapper}>
               <p className={styles.AdressBold}>ul. Lipska 20/40</p>
               <p className={styles.AdressStandard}>30-412 Kraków</p>
-              <p className={styles.AdressBold}>(12) 214 84 30</p>
+              <a className={styles.AdressBold} href="tel:+48602755332">
+                602 755 332
+              </a>
               <p className={styles.AdressStandard}>office@office.pl</p>
             </div>
           </div>
@@ -36,13 +38,13 @@ const FooterView = () => {
           </div>
           <div className={styles.SocialLinks}>
             <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/" className={styles.Facebook}>
-              <Facebook className={styles.Icon}/>
+              <Facebook className={styles.Icon} />
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/" className={styles.Twitter}>
-              <Twitter className={styles.Icon}/>
+              <Twitter className={styles.Icon} />
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/" className={styles.Instagram}>
-              <Instagram className={styles.Icon}/>
+              <Instagram className={styles.Icon} />
             </a>
           </div>
           <p className={styles.Copyright01}>Copyright 2020 MJEZAK & BEEONTHEWEB</p>
