@@ -2,53 +2,27 @@
 @import "../../mixins.scss";
 
 .ContactContainer {
-  margin-top: 100px;
-  padding-top: 60px;
+  margin-top: 16px;
+  padding-top: 16px;
   grid-area: contact;
   background-color: $white;
   display: grid;
   grid-template-columns: 1042px;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
-    "title"
     "icons"
     "tabs"
     "office"
     "phone-form";
 
-  .ContentWrapperTop {
-    grid-area: title;
-
-    .ContactTitle {
-      @include section-title;
-    }
-    .ContactParagraph {
-      @include base-paragraph;
-      margin-bottom: 64px;
-    }
-  }
-
   .contactTabsView {
     grid-area: icons;
-
-    // .ContactIconsContainer {
-    //   grid-area: tabs;
-    // }
   }
 
   .ContentWrapperBottom {
     grid-area: office;
 
-    .ContactTitle {
-      font-size: 32px;
-      text-align: center;
-      color: $base-dark;
-      font-weight: 700;
-      letter-spacing: $small-letter-spacing;
-      text-transform: uppercase;
-      margin-bottom: 56px;
-    }
     .ContactParagraph {
       @include base-paragraph;
       margin-bottom: 64px;

@@ -2,22 +2,13 @@ import React from "react";
 import styles from "./ContactView.module.scss";
 import { ReactComponent as CameraIcon } from "../../assets/icons/camera-icon.svg";
 import ContactTabsView from "../ContactTabsView/ContactTabsView";
-// import { ReactComponent as QuaotationMark } from "../../assets/helpers/quotation-mark.svg";
 
 const ContactView = () => {
   return (
     <>
       <div className={styles.ContactContainer} id="kontakt">
-        <div className={styles.ContentWrapperTop}>
-          {/* <h2 className={styles.ContactTitle}>Skontaktuj się z nami</h2>
-          <p className={styles.ContactParagraph}>
-            Chcesz poznać więcej szczegółów naszej oferty? Masz dodatkowe pytania odnośnie inwestycji? Skontaktuj się z
-            nami, a nasi doradcy udzielą Ci wszelkich niezbędnych informacji.
-          </p> */}
-        </div>
         <ContactTabsView className={styles.contactTabsView} />
         <div className={styles.ContentWrapperBottom}>
-          <h2 className={styles.ContactTitle}>biuro sprzedaży</h2>
           <p className={styles.ContactParagraph}>
             Nasze biura sprzedaży pozostają do Państwa dyspozycji pod wzkazanymi poniżej adresami.
             <strong>

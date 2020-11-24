@@ -5,7 +5,7 @@
   grid-area: hero;
   .sectionTitle {
     @include section-title;
-    margin: 140px 0 80px;
+    margin: 64px 0 32px;
     text-transform: uppercase;
     text-align: left;
   }
@@ -28,6 +28,7 @@
 
     .contactFormWrapper {
       margin-top: 64px;
+      margin-bottom: 64px;
       display: grid;
       grid-template-columns: auto 633px;
       grid-template-rows: auto;
