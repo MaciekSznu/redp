@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 @import "../../mixins.scss";
 
-.investorPageWrapper {
+.archiveInvestmentsWrapper {
   grid-area: hero;
   .sectionTitle {
     @include section-title;

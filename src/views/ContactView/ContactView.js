@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./ContactView.module.scss";
 import { ReactComponent as CallIcon } from "../../assets/icons/call-icon.svg";
 import { ReactComponent as MessageIcon } from "../../assets/icons/message-icon.svg";
@@ -29,20 +28,16 @@ const ContactView = () => {
             </a>
           </div>
           <div className={styles.IconWrapper}>
-            <Link to="/contact">
-              <div className={styles.Icon}>
-                <MessageIcon className={styles.IconBackground} />
-              </div>
-              <p className={styles.IconTitle}>napisz</p>
-            </Link>
+            <div className={styles.Icon}>
+              <MessageIcon className={styles.IconBackground} />
+            </div>
+            <p className={styles.IconTitle}>napisz</p>
           </div>
           <div className={styles.IconWrapper}>
-            <Link to="/video">
-              <div className={styles.Icon}>
-                <OnlineIcon className={styles.IconBackground} />
-              </div>
-              <p className={styles.IconTitle}>zobacz</p>
-            </Link>
+            <div className={styles.Icon}>
+              <OnlineIcon className={styles.IconBackground} />
+            </div>
+            <p className={styles.IconTitle}>zobacz</p>
           </div>
         </div>
         <div className={styles.ContentWrapperBottom}>
@@ -113,7 +108,6 @@ const ContactView = () => {
                   nieruchomości za pośrednictwem połączenia telefonicznego przez Real Estate Sp. z o.o.
                 </label>
               </div>
-              {/* </div> */}
             </form>
           </div>
         </div>

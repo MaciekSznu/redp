@@ -176,10 +176,34 @@
         font-weight: 500;
       }
     }
-    a {
-      text-decoration: none;
-      .CompanyButton {
-        @include button-secondary;
+
+    .investmentsSeeMore {
+      .investmentsSeeMoreDetails {
+        width: 100%;
+        cursor: pointer;
+
+        &[open] {
+          width: 100%;
+        }
+
+        .investmentsSeeMoreSummary::-webkit-details-marker {
+          display: none;
+        }
+
+        .investmentsSeeMoreSummary {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+
+          .investmentsButton {
+            @include button-secondary;
+            z-index: 0;
+
+            @media screen and (max-width: 768px) {
+              margin: 0 auto;
+            }
+          }
+        }
       }
     }
 
@@ -189,10 +213,6 @@
         font-size: 16px;
         line-height: 24px;
         margin: 32px 0;
-      }
-
-      .CompanyButton {
-        margin: 0 auto;
       }
     }
   }

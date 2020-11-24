@@ -433,13 +433,32 @@
     }
   }
 
-  a {
-    text-decoration: none;
-    .ScheduleButton {
-      @include button-secondary;
+  .scheduleSeeMore {
+    .scheduleSeeMoreDetails {
+      width: 100%;
+      cursor: pointer;
 
-      @media screen and (max-width: 768px) {
-        margin: 0 auto;
+      &[open] {
+        width: 100%;
+      }
+
+      .scheduleSeeMoreSummary::-webkit-details-marker {
+        display: none;
+      }
+
+      .scheduleSeeMoreSummary {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        .scheduleButton {
+          @include button-secondary;
+          z-index: 0;
+
+          @media screen and (max-width: 768px) {
+            margin: 0 auto;
+          }
+        }
       }
     }
   }
