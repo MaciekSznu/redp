@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./InvestmentView.module.scss";
-// import { ReactComponent as GreenHexagon } from "../../assets/helpers/hexagon-green.svg";
+import ScheduleView from "../ScheduleView/ScheduleView";
 import { ReactComponent as FlatIcon } from "../../assets/icons/flat-icon.svg";
 import { ReactComponent as AreaIcon } from "../../assets/icons/area-icon.svg";
 import { ReactComponent as PriceIcon } from "../../assets/icons/price-icon.svg";
@@ -55,21 +54,18 @@ const InvestmentView = () => {
         <div className={styles.InvestmentIconsFullWidthContainer}>
           <div className={styles.IconWrapper}>
             <div className={styles.Icon}>
-              {/* <GreenHexagon className={styles.IconBackground} /> */}
               <MapIcon className={styles.IconImage} />
             </div>
             <p className={styles.IconTitle}>dobra lokalizacja</p>
           </div>
           <div className={styles.IconWrapper}>
             <div className={styles.Icon}>
-              {/* <GreenHexagon className={styles.IconBackground} /> */}
               <InfrastructureIcon className={styles.IconImage} />
             </div>
             <p className={styles.IconTitle}>przyjazna infrastruktura</p>
           </div>
           <div className={styles.IconWrapper}>
             <div className={styles.Icon}>
-              {/* <GreenHexagon className={styles.IconBackground} /> */}
               <LayoutIcon className={styles.IconImage} />
             </div>
             <p className={styles.IconTitle}>przemyślany układ</p>
@@ -139,9 +135,16 @@ const InvestmentView = () => {
           Chcesz poznać więcej szczegółów naszej inwestycji? Zapoznaj się z przewidywanem planem realizacji oraz
           przeczytaj najnowsze aktualności.
         </p>
-        <Link to="/schedule">
-          <button className={styles.ScheduleButton}>zobacz harmonogram inwestycji</button>
-        </Link>
+        <div className={styles.scheduleSeeMore}>
+          <details className={styles.scheduleSeeMoreDetails}>
+            <summary className={styles.scheduleSeeMoreSummary}>
+              <span role="button" className={styles.scheduleButton}>
+                zobacz harmonogram inwestycji
+              </span>
+            </summary>
+            <ScheduleView />
+          </details>
+        </div>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const VideoPageView = () => {
   return (
@@ -8,7 +8,7 @@ const VideoPageView = () => {
       <br />
       <br />
       <br />
-      <Link to="/#kontakt">home</Link>
+      {/* <Link to="/#kontakt">home</Link> */}
     </>
   );
 };

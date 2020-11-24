@@ -1,8 +1,5 @@
 import React from "react";
-import ScrollToTop from "../../components/Helpers/ScrollToTop";
-import styles from "./InvestorPageView.module.scss";
-import HomePageLink from "../../components/Header/HomePageLink";
-import FooterView from "../FooterView/FooterView";
+import styles from "./ArchiveInvestmentsView.module.scss";
 import { ReactComponent as InvestmentIcon } from "../../assets/icons/investment-archive-icon.svg";
 import investment01Image from "../../assets/images/archive_investments/investment_01_521_415.jpg";
 import investment02Image from "../../assets/images/archive_investments/investment_02_521_415.jpg";
@@ -60,18 +57,15 @@ const renderInvestments = () => {
   });
 };
 
-const InvestorPageView = () => {
+const ArchiveInvestmentsView = () => {
   return (
     <>
-      <ScrollToTop />
-      <HomePageLink />
-      <article className={styles.investorPageWrapper}>
+      <article className={styles.archiveInvestmentsWrapper}>
         <h1 className={styles.sectionTitle}>Tak budowaliśmy nasze doświadczenie</h1>
         {renderInvestments()}
       </article>
-      <FooterView />
     </>
   );
 };
 
-export default InvestorPageView;
+export default ArchiveInvestmentsView;

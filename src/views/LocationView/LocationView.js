@@ -13,8 +13,6 @@ import { ReactComponent as DoctorIcon } from "../../assets/icons/doctor-icon.svg
 import { ReactComponent as EducationIcon } from "../../assets/icons/education-icon.svg";
 import { ReactComponent as HexagonSeeMore } from "../../assets/helpers/hexagon-see-more.svg";
 
-// import { ReactComponent as QuaotationMark } from "../../assets/helpers/quotation-mark.svg";
-
 const LocationView = () => {
   return (
     <>

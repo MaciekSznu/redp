@@ -1,52 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./ContactView.module.scss";
-import { ReactComponent as CallIcon } from "../../assets/icons/call-icon.svg";
-import { ReactComponent as MessageIcon } from "../../assets/icons/message-icon.svg";
-import { ReactComponent as OnlineIcon } from "../../assets/icons/online-icon.svg";
 import { ReactComponent as CameraIcon } from "../../assets/icons/camera-icon.svg";
-// import { ReactComponent as QuaotationMark } from "../../assets/helpers/quotation-mark.svg";
+import ContactTabsView from "../ContactTabsView/ContactTabsView";
 
 const ContactView = () => {
   return (
     <>
       <div className={styles.ContactContainer} id="kontakt">
-        <div className={styles.ContentWrapperTop}>
-          <h2 className={styles.ContactTitle}>Skontaktuj się z nami</h2>
-          <p className={styles.ContactParagraph}>
-            Chcesz poznać więcej szczegółów naszej oferty? Masz dodatkowe pytania odnośnie inwestycji? Skontaktuj się z
-            nami, a nasi doradcy udzielą Ci wszelkich niezbędnych informacji.
-          </p>
-        </div>
-        <div className={styles.ContactIconsContainer}>
-          <h3 className={styles.ContactSubTitle}>wybierz najlepszą formę kontaktu</h3>
-          <div className={styles.IconWrapper}>
-            <a href="tel:+48602755332">
-              <div className={styles.Icon}>
-                <CallIcon className={styles.IconBackground} />
-              </div>
-              <p className={styles.IconTitle}>porozmawiaj</p>
-            </a>
-          </div>
-          <div className={styles.IconWrapper}>
-            <Link to="/contact">
-              <div className={styles.Icon}>
-                <MessageIcon className={styles.IconBackground} />
-              </div>
-              <p className={styles.IconTitle}>napisz</p>
-            </Link>
-          </div>
-          <div className={styles.IconWrapper}>
-            <Link to="/video">
-              <div className={styles.Icon}>
-                <OnlineIcon className={styles.IconBackground} />
-              </div>
-              <p className={styles.IconTitle}>zobacz</p>
-            </Link>
-          </div>
-        </div>
+        <ContactTabsView className={styles.contactTabsView} />
         <div className={styles.ContentWrapperBottom}>
-          <h2 className={styles.ContactTitle}>biuro sprzedaży</h2>
           <p className={styles.ContactParagraph}>
             Nasze biura sprzedaży pozostają do Państwa dyspozycji pod wzkazanymi poniżej adresami.
             <strong>
@@ -90,7 +52,6 @@ const ContactView = () => {
           <h2 className={styles.ContactTitle}>Zostaw swój numer, a nasi doradcy ODDZWONIĄ DO CIEBIE</h2>
           <div className={styles.PhoneFormWrapper}>
             <form className={styles.PhoneForm}>
-              {/* <div> */}
               <label className={styles.PhoneFormLabel} htmlFor="phone">
                 telefon
               </label>
@@ -113,7 +74,6 @@ const ContactView = () => {
                   nieruchomości za pośrednictwem połączenia telefonicznego przez Real Estate Sp. z o.o.
                 </label>
               </div>
-              {/* </div> */}
             </form>
           </div>
         </div>

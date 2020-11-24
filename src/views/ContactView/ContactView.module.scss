@@ -2,8 +2,8 @@
 @import "../../mixins.scss";
 
 .ContactContainer {
-  margin-top: 100px;
-  padding-top: 60px;
+  margin-top: 16px;
+  padding-top: 16px;
   grid-area: contact;
   background-color: $white;
   display: grid;
@@ -11,126 +11,18 @@
   grid-template-rows: auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
-    "title"
     "icons"
+    "tabs"
     "office"
     "phone-form";
 
-  .ContentWrapperTop {
-    grid-area: title;
-
-    .ContactTitle {
-      @include section-title;
-    }
-    .ContactParagraph {
-      @include base-paragraph;
-      margin-bottom: 64px;
-    }
-  }
-
-  .ContactIconsContainer {
+  .contactTabsView {
     grid-area: icons;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 0px 0px;
-    grid-template-areas:
-      "title title title"
-      "first second third";
-    margin-bottom: 50px;
-    margin-top: 50px;
-
-    .ContactSubTitle {
-      grid-area: title;
-      @include section-sub-title;
-      font-weight: 600;
-      letter-spacing: $small-letter-spacing;
-      margin-bottom: 56px;
-    }
-
-    .IconWrapper {
-      margin: 8px 0 48px;
-      grid-area: first;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      a {
-        text-decoration: none;
-        .Icon {
-          cursor: pointer;
-          margin-top: 8px;
-
-          .IconBackground {
-            transition: scale 0.75s ease-out, filter -0.75s 0.75s ease-out;
-          }
-
-          &:hover .IconBackground {
-            transform: scale(1.05);
-            filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.2));
-          }
-        }
-
-        .IconTitle {
-          margin-top: 24px;
-          margin-bottom: 40px;
-          font-size: 18px;
-          color: $base-dark;
-          text-transform: uppercase;
-          font-weight: 600;
-          letter-spacing: $small-letter-spacing;
-          width: 100%;
-          text-align: center;
-        }
-      }
-
-      .Icon {
-        cursor: pointer;
-        margin-top: 8px;
-
-        .IconBackground {
-          transition: scale 0.75s ease-out, filter -0.75s 0.75s ease-out;
-        }
-
-        &:hover .IconBackground {
-          transform: scale(1.05);
-          filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.2));
-        }
-      }
-
-      .IconTitle {
-        margin-top: 24px;
-        margin-bottom: 40px;
-        font-size: 18px;
-        color: $base-dark;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: $small-letter-spacing;
-      }
-
-      &:nth-of-type(2) {
-        grid-area: second;
-      }
-
-      &:nth-of-type(3) {
-        grid-area: third;
-      }
-    }
   }
 
   .ContentWrapperBottom {
     grid-area: office;
 
-    .ContactTitle {
-      font-size: 32px;
-      text-align: center;
-      color: $base-dark;
-      font-weight: 700;
-      letter-spacing: $small-letter-spacing;
-      text-transform: uppercase;
-      margin-bottom: 56px;
-    }
     .ContactParagraph {
       @include base-paragraph;
       margin-bottom: 64px;

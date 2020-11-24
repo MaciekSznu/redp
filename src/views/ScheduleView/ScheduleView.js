@@ -1,8 +1,5 @@
 import React from "react";
-import FooterView from "../FooterView/FooterView";
-import HomePageLink from "../../components/Header/HomePageLink";
-import ScrollToTop from "../../components/Helpers/ScrollToTop";
-import styles from "./SchedulePageView.module.scss";
+import styles from "./ScheduleView.module.scss";
 import { ReactComponent as Schedule01 } from "../../assets/icons/schedule/schedule_01.svg";
 import { ReactComponent as Schedule02 } from "../../assets/icons/schedule/schedule_02.svg";
 import { ReactComponent as Schedule03 } from "../../assets/icons/schedule/schedule_03.svg";
@@ -17,11 +14,9 @@ import { ReactComponent as Schedule11 } from "../../assets/icons/schedule/schedu
 import { ReactComponent as Schedule12 } from "../../assets/icons/schedule/schedule_12.svg";
 import { ReactComponent as Schedule13 } from "../../assets/icons/schedule/schedule_13.svg";
 
-const SchedulePageView = () => {
+const ScheduleView = () => {
   return (
     <>
-      <ScrollToTop />
-      <HomePageLink />
       <section className={styles.schedulePageWrapper}>
         <h1 className={styles.sectionTitle}>Sprawdź co u nas słychać</h1>
         <p className={styles.sectionParagraph}>
@@ -103,12 +98,9 @@ const SchedulePageView = () => {
           <Schedule12 className={styles.schedule12} />
           <Schedule13 className={styles.schedule13} />
         </div>
-
-        {/* <Link to="/">home</Link> */}
       </section>
-      <FooterView />
     </>
   );
 };
 
-export default SchedulePageView;
+export default ScheduleView;
