@@ -5,11 +5,6 @@ import { ReactComponent as HexagonLocalization } from "../../assets/helpers/hexa
 const ContactOfficeView = () => {
   return (
     <article className={styles.contactOfficeWrapper}>
-      <h1 className={styles.sectionTitle}>skontaktuj się z nami</h1>
-      <p className={styles.sectionParagraph}>
-        Chcesz poznać więcej szczegółów naszej oferty? Masz pytania odnośnie inwestycji? Skontaktuj się z nami, a nasi
-        doradcy udzielą Ci wszelkich niezbędnych informacji.
-      </p>
       <h2 className={styles.sectionSubTitle}>nasze biuro sprzedaży</h2>
       <p className={styles.sectionParagraph}>
         W celu umówienia indywidualnego spotkania z naszym doradcą prosimy o wcześniejszy kontakt telefoniczny.

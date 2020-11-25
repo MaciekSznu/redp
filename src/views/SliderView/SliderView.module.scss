@@ -30,6 +30,7 @@
       grid-template-areas: "first second third";
       border-bottom: 4px solid $dark-grey;
       border-radius: 4px;
+      margin-bottom: 70px;
 
       .SliderTabName {
         grid-area: first;
@@ -60,10 +61,9 @@
     }
   }
 
-  .Slider {
+  .slider {
     position: relative;
     grid-area: main-slider;
-    margin-top: 70px;
     width: 100%;
     height: auto;
     max-height: 728px;

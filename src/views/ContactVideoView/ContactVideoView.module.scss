@@ -3,23 +3,13 @@
 
 .videoPageWrapper {
   grid-area: hero;
-  .sectionTitle {
-    @include section-title;
-    margin: 64px 0 32px;
-    text-transform: uppercase;
-    text-align: left;
-  }
-
-  .sectionParagraph {
-    @include base-paragraph;
-  }
 
   .videoContactWrapper {
     .sectionSubTitle {
       @include section-sub-title;
-      font-weight: 600;
-      letter-spacing: $small-letter-spacing;
-      margin: 56px 0;
+      font-size: 32px;
+      margin: 64px 0 24px;
+      text-align: left;
     }
 
     .sectionParagraph {

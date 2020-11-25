@@ -10,11 +10,6 @@ import { ReactComponent as CalendarArrow } from "../../assets/icons/calendar-arr
 const ContactVideoView = () => {
   return (
     <article className={styles.videoPageWrapper}>
-      <h1 className={styles.sectionTitle}>skontaktuj się z nami</h1>
-      <p className={styles.sectionParagraph}>
-        Chcesz poznać więcej szczegółów naszej oferty? Masz pytania odnośnie inwestycji? Skontaktuj się z nami, a nasi
-        doradcy udzielą Ci wszelkich niezbędnych informacji.
-      </p>
       <section className={styles.videoContactWrapper}>
         <h2 className={styles.sectionSubTitle}>umów śię na prezentację mieszkania</h2>
         <p className={styles.sectionParagraph}>

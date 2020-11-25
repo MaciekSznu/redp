@@ -3,21 +3,11 @@
 
 .contactOfficeWrapper {
   grid-area: hero;
-  .sectionTitle {
-    @include section-title;
-    margin: 64px 0 32px;
-    text-transform: uppercase;
-    text-align: left;
-  }
-
-  .sectionParagraph {
-    @include base-paragraph;
-  }
 
   .sectionSubTitle {
     @include section-sub-title;
     font-size: 32px;
-    margin: 96px 0 24px;
+    margin: 64px 0 24px;
     text-align: left;
   }
 

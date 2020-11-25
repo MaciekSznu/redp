@@ -9,11 +9,6 @@ import { ReactComponent as Instagram } from "../../assets/icons/instagram-icon.s
 const ContactFormView = () => {
   return (
     <article className={styles.contactPageWrapper}>
-      <h1 className={styles.sectionTitle}>skontaktuj się z nami</h1>
-      <p className={styles.sectionParagraph}>
-        Chcesz poznać więcej szczegółów naszej oferty? Masz pytania odnośnie inwestycji? Skontaktuj się z nami, a nasi
-        doradcy udzielą Ci wszelkich niezbędnych informacji.
-      </p>
       <section className={styles.contactFormSection}>
         <h2 className={styles.sectionSubTitle}>napisz do nas</h2>
         <p className={styles.sectionParagraph}>
