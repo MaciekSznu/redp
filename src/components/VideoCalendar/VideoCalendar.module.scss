@@ -98,11 +98,11 @@
       }
     }
     .hours {
-      margin-bottom: 8px;
+      // margin-bottom: 8px;
       display: grid;
       grid-template-columns: 75px repeat(5, 1fr) 75px;
       grid-template-rows: repeat(4, 50px);
-      grid-gap: 0 8px;
+      grid-gap: 8px 8px;
       grid-template-areas:
         ". day-01-09 day-02-09 day-03-09 day-04-09 day-05-09 ."
         ". day-01-11 day-02-11 day-03-11 day-04-11 day-05-11 ."
