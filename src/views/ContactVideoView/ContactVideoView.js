@@ -5,13 +5,13 @@ import { ReactComponent as AtHomeIcon } from "../../assets/icons/at-home-icon.sv
 import { ReactComponent as FormIcon } from "../../assets/icons/form-icon.svg";
 import { ReactComponent as Step1Icon } from "../../assets/icons/step-1-icon.svg";
 import { ReactComponent as Step2Icon } from "../../assets/icons/step-2-icon.svg";
-import { ReactComponent as CalendarArrow } from "../../assets/icons/calendar-arrow.svg";
+import VideoCalendar from "../../components/VideoCalendar/VideoCalendar";
 
 const ContactVideoView = () => {
   return (
     <article className={styles.videoPageWrapper}>
       <section className={styles.videoContactWrapper}>
-        <h2 className={styles.sectionSubTitle}>umów śię na prezentację mieszkania</h2>
+        <h2 className={styles.sectionSubTitle}>umów się na prezentację mieszkania</h2>
         <p className={styles.sectionParagraph}>
           W trosce o wygodę naszych klientów oferujemy możliwość wirtualnego spotkania z naszym doradcą. Zajrzyj do
           naszego kalendarza i umów się na bezpłatną konsultację online.
@@ -28,7 +28,7 @@ const ContactVideoView = () => {
           </div>
           <div className={styles.iconWrapper}>
             <AtHomeIcon className={styles.icon} />
-            <p className={styles.iconTitle}>bex wychodzenia z domu</p>
+            <p className={styles.iconTitle}>bez wychodzenia z domu</p>
           </div>
         </div>
         <div className={styles.onlineMeetingWrapper}>
@@ -39,58 +39,10 @@ const ContactVideoView = () => {
             <div className={styles.contactData}>
               <h3 className={styles.step}>krok 1</h3>
               <Step1Icon className={styles.iconImage} />
-              <p className={styles.iconTitle}>Wybierz datę spotkania</p>
+              <p className={styles.iconTitle}>Wybierz termin spotkania</p>
               <p className={styles.text}>Za pomocą strzałek przewiń do kolejnego tygodnia.</p>
             </div>
-            <div className={styles.selectWrapper}>
-              <div className={styles.selectBox}>
-                <h4 className={styles.month}>grudzień</h4>
-                <div className={styles.days}>
-                  <CalendarArrow className={styles.prev} />
-                  <span>Pon</span>
-                  <span>Wt</span>
-                  <span>Śr</span>
-                  <span>Czw</span>
-                  <span>Pt</span>
-                  <CalendarArrow className={styles.next} />
-                </div>
-                <div className={styles.date}>
-                  <span>7</span>
-                  <span>8</span>
-                  <span>9</span>
-                  <span>10</span>
-                  <span>11</span>
-                </div>
-                <div className={styles.hour9}>
-                  <span>9:00</span>
-                  <span>9:00</span>
-                  <span>9:00</span>
-                  <span>9:00</span>
-                  <span>9:00</span>
-                </div>
-                <div className={styles.hour11}>
-                  <span>11:00</span>
-                  <span>11:00</span>
-                  <span>11:00</span>
-                  <span>11:00</span>
-                  <span>11:00</span>
-                </div>
-                <div className={styles.hour13}>
-                  <span>13:00</span>
-                  <span>13:00</span>
-                  <span>13:00</span>
-                  <span>13:00</span>
-                  <span>13:00</span>
-                </div>
-                <div className={styles.hour15}>
-                  <span>15:00</span>
-                  <span>15:00</span>
-                  <span>15:00</span>
-                  <span>15:00</span>
-                  <span>15:00</span>
-                </div>
-              </div>
-            </div>
+            <VideoCalendar className={styles.selectWrapper} />
           </div>
           <div className={styles.onlineMeetingFormWrapper}>
             <div className={styles.contactData}>
