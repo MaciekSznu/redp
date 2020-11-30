@@ -196,4 +196,194 @@
       top: 1874px;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .sectionTitle {
+      font-size: 20px;
+    }
+
+    .sectionSubTitle {
+      @include section-sub-title;
+      font-size: 16px;
+      height: 32px;
+      line-height: 32px;
+
+      &:before {
+        height: 2px;
+        width: calc(100% - 32px);
+        bottom: -16px;
+        border-radius: 2px;
+      }
+
+      &:after {
+        bottom: -30px;
+        border-width: 16px 25px 0 25px;
+      }
+    }
+
+    .scheduleEtapsWrapper {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        "row_01"
+        "row_02"
+        "row_03";
+
+      .scheduleEtapsRow {
+        grid-area: row_01;
+        display: grid;
+        grid-template-rows: 80px auto;
+        grid-template-columns: 100%;
+        grid-template-areas:
+          "etap"
+          "desc";
+
+        .scheduleEtapsRowEtap {
+          height: 100%;
+          background: $white;
+          border: none;
+          line-height: unset;
+          font-size: 24px;
+          padding-left: 44px;
+          padding-top: 40px;
+
+          &:after {
+            display: none;
+          }
+        }
+
+        .scheduleEtapsRowDescription {
+          grid-area: desc;
+          border: none;
+          border-radius: 0;
+          height: 335px;
+          display: grid;
+          grid-template-columns: 70% 30%;
+          grid-template-rows: 20px 17px;
+          grid-template-areas:
+            "title month"
+            ". year";
+          padding: 24px 44px;
+
+          .descriptionTitle {
+            grid-area: title;
+            font-size: 14px;
+            margin: 0;
+            text-align: left;
+          }
+
+          .descriptionParagraph {
+            grid-area: month;
+            font-size: 14px;
+            margin: 0;
+            text-align: right;
+
+            &:nth-of-type(2) {
+              grid-area: year;
+            }
+          }
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          display: none;
+        }
+        &:nth-of-type(4) {
+          grid-area: row_02;
+          .scheduleEtapsRowDescription {
+            height: 250px;
+          }
+        }
+        &:nth-of-type(5) {
+          display: none;
+        }
+        &:nth-of-type(6) {
+          grid-area: row_03;
+        }
+        &:nth-of-type(7),
+        &:nth-of-type(8) {
+          display: none;
+        }
+      }
+
+      .schedule01,
+      .schedule02,
+      .schedule03,
+      .schedule04,
+      .schedule05,
+      .schedule06,
+      .schedule07,
+      .schedule08,
+      .schedule09,
+      .schedule10,
+      .schedule11,
+      .schedule12,
+      .schedule13 {
+        position: absolute;
+        transform: scale(0.5);
+        transform-origin: center center;
+      }
+
+      .schedule02,
+      .schedule07,
+      .schedule10 {
+        left: 50%;
+        transform: translateX(-50%) scale(0.5);
+      }
+
+      .schedule01,
+      .schedule06,
+      .schedule09 {
+        left: calc(50% - 100px);
+        transform: translateX(-50%) scale(0.5);
+      }
+
+      .schedule03,
+      .schedule08,
+      .schedule11 {
+        left: calc(50% + 100px);
+        transform: translateX(-50%) scale(0.5);
+      }
+
+      .schedule04,
+      .schedule12 {
+        left: calc(50% - 50px);
+        transform: translateX(-50%) scale(0.5);
+      }
+
+      .schedule05,
+      .schedule13 {
+        left: calc(50% + 50px);
+        transform: translateX(-50%) scale(0.5);
+      }
+
+      .schedule01,
+      .schedule02,
+      .schedule03 {
+        top: 120px;
+      }
+
+      .schedule04,
+      .schedule05 {
+        top: 205px;
+      }
+
+      .schedule06,
+      .schedule07,
+      .schedule08 {
+        top: 555px;
+      }
+
+      .schedule09,
+      .schedule10,
+      .schedule11 {
+        top: 905px;
+      }
+
+      .schedule12,
+      .schedule13 {
+        top: 990px;
+      }
+    }
+  }
 }
