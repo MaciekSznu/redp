@@ -129,11 +129,9 @@ const VideoCalendar = () => {
 
   useEffect(() => {
     if (inputRef.current) {
-      // console.log(inputRef.current);
       inputRef.current.parentNode.style.background = "#56928a";
     }
     if (prevState) {
-      // console.log(prevState);
       prevState.parentNode.style.background = "#f8f7f7";
     }
   }, [prevState, selectedTime]);

@@ -11,7 +11,7 @@ const ContactVideoView = () => {
   return (
     <article className={styles.videoPageWrapper}>
       <section className={styles.videoContactWrapper}>
-        <h2 className={styles.sectionSubTitle}>umów śię na prezentację mieszkania</h2>
+        <h2 className={styles.sectionSubTitle}>umów się na prezentację mieszkania</h2>
         <p className={styles.sectionParagraph}>
           W trosce o wygodę naszych klientów oferujemy możliwość wirtualnego spotkania z naszym doradcą. Zajrzyj do
           naszego kalendarza i umów się na bezpłatną konsultację online.
@@ -39,7 +39,7 @@ const ContactVideoView = () => {
             <div className={styles.contactData}>
               <h3 className={styles.step}>krok 1</h3>
               <Step1Icon className={styles.iconImage} />
-              <p className={styles.iconTitle}>Wybierz datę spotkania</p>
+              <p className={styles.iconTitle}>Wybierz termin spotkania</p>
               <p className={styles.text}>Za pomocą strzałek przewiń do kolejnego tygodnia.</p>
             </div>
             <VideoCalendar className={styles.selectWrapper} />
