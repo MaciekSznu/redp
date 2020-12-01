@@ -133,7 +133,7 @@
         }
 
         &:hover {
-          background: $light-green;
+          background: rgba($light-green, 0.6);
         }
 
         &:nth-of-type(2) {

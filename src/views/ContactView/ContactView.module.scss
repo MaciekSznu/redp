@@ -244,6 +244,12 @@
           line-height: 21px;
           font-weight: 300;
           letter-spacing: $small-letter-spacing;
+          z-index: 2;
+          cursor: pointer;
+        }
+
+        & .PhoneFormCheckbox:checked ~ .PhoneFormCustomCheckbox {
+          background: $base-green;
         }
       }
     }

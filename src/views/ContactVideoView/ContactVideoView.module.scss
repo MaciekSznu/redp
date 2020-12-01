@@ -111,8 +111,9 @@
 
           .text {
             font-size: 16px;
-            font-weight: 400;
+            font-weight: 300;
             margin: 30px 0 0;
+            line-height: 20px;
           }
         }
 
@@ -128,7 +129,7 @@
             display: block;
             font-size: 18px;
             text-transform: uppercase;
-            margin: 16px 0 8px;
+            margin: 24px 0 8px;
             color: $base-dark;
             font-weight: 700;
           }
@@ -177,6 +178,7 @@
               margin-right: 14px;
               border: 2px solid rgba(54, 72, 89, 0.1);
               border-radius: 1px;
+              cursor: pointer;
             }
 
             .rodoCheckboxLabel {
@@ -185,6 +187,12 @@
               line-height: 21px;
               font-weight: 300;
               letter-spacing: $small-letter-spacing;
+              z-index: 2;
+              cursor: pointer;
+            }
+
+            & .rodoCheckbox:checked ~ .rodoCustomCheckbox {
+              background: $base-green;
             }
           }
           .formButton {
