@@ -19,6 +19,30 @@
   transform-origin: center;
 }
 
+.slick-prev #slide-prev-path-01,
+.slick-next #slide-prev-path-01 {
+  fill: #f8f7f7;
+  opacity: 0.8;
+  transition: fill 0.75s ease-out, opacity 0.5s ease-out;
+}
+
+.slick-prev #slide-prev-path-02,
+.slick-next #slide-prev-path-02 {
+  stroke: #364859;
+  transition: stroke 0.5s ease-out;
+}
+
+.slick-prev:hover #slide-prev-path-01,
+.slick-next:hover #slide-prev-path-01 {
+  fill: #569289;
+  opacity: 1;
+}
+
+.slick-prev:hover #slide-prev-path-02,
+.slick-next:hover #slide-prev-path-02 {
+  stroke: #f8f7f7;
+}
+
 .slick-dots {
   bottom: 32px;
 }

@@ -12,13 +12,29 @@
     top: 102px;
     left: 102px;
     color: $white;
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  .heroImageAdditionalText {
+    position: absolute;
+    top: 156px;
+    left: 102px;
+    color: $white;
+    font-size: 32px;
+    font-weight: 400;
   }
 
   .heroButton {
     @include button-primary;
     position: absolute;
-    top: 200px;
+    top: 250px;
     left: 102px;
+    height: 58px;
+    line-height: 26px;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 16px 24px;
   }
 
   .PatternLeft,
@@ -45,6 +61,9 @@
       color: $white;
     }
 
+    .heroImageAdditionalText {
+      display: none;
+    }
     .heroButton {
       @include button-primary;
       position: absolute;

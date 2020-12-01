@@ -8,7 +8,7 @@ const flatsArray = [
     price: 603000,
     balcony: "taras",
     status: "reserved",
-    chart: "link",
+    chart: "zobacz",
   },
   {
     buildingNumber: 1,
@@ -19,7 +19,7 @@ const flatsArray = [
     price: 405000,
     balcony: "brak",
     status: "sold",
-    chart: "link",
+    chart: "zobacz",
   },
   {
     buildingNumber: 1,
@@ -30,7 +30,7 @@ const flatsArray = [
     price: 405000,
     balcony: "taras",
     status: "for sale",
-    chart: "link",
+    chart: "zobacz",
   },
   {
     buildingNumber: 1,
@@ -41,7 +41,7 @@ const flatsArray = [
     price: 603000,
     balcony: "balkon",
     status: "for sale",
-    chart: "link",
+    chart: "zobacz",
   },
   {
     buildingNumber: 1,
@@ -52,7 +52,7 @@ const flatsArray = [
     price: 450000,
     balcony: "balkon",
     status: "for sale",
-    chart: "link",
+    chart: "zobacz",
   },
   {
     buildingNumber: 1,
@@ -63,7 +63,7 @@ const flatsArray = [
     price: 450000,
     balcony: "balkon",
     status: "for sale",
-    chart: "link",
+    chart: "zobacz",
   },
   {
     buildingNumber: 1,
@@ -74,7 +74,7 @@ const flatsArray = [
     price: 636500,
     balcony: "balkon",
     status: "for sale",
-    chart: "link",
+    chart: "zobacz",
   },
   {
     buildingNumber: 1,
@@ -85,7 +85,7 @@ const flatsArray = [
     price: 495000,
     balcony: "balkon",
     status: "for sale",
-    chart: "link",
+    chart: "zobacz",
   },
   {
     buildingNumber: 1,
@@ -96,7 +96,7 @@ const flatsArray = [
     price: 495000,
     balcony: "balkon",
     status: "for sale",
-    chart: "link",
+    chart: "zobacz",
   },
   {
     buildingNumber: 1,
@@ -107,7 +107,7 @@ const flatsArray = [
     price: 870000,
     balcony: "balkon",
     status: "for sale",
-    chart: "link",
+    chart: "zobacz",
   },
   {
     buildingNumber: 1,
@@ -118,7 +118,7 @@ const flatsArray = [
     price: 780000,
     balcony: "balkon",
     status: "for sale",
-    chart: "link",
+    chart: "zobacz",
   },
 ];
 

@@ -44,6 +44,7 @@
   }
 
   .InvestmentIconsContainer {
+    margin-bottom: 160px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -51,7 +52,7 @@
     grid-template-areas: "first second third";
 
     .IconsWrapper {
-      margin: 48px 0;
+      margin: 48px 0 0;
       grid-area: first;
       display: flex;
       flex-direction: column;
@@ -85,6 +86,7 @@
     }
 
     @media screen and (max-width: 768px) {
+      margin-bottom: 100px;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       grid-template-areas: "first" "second" "third";
@@ -134,7 +136,7 @@
 
   .InvestmentSectionTitle {
     @include section-sub-title;
-    margin-top: 92px;
+    // margin-top: 92px;
     margin-bottom: 56px;
   }
 
@@ -146,7 +148,7 @@
     grid-template-areas: "first second third";
     background: $base-grey;
     margin-top: 72px;
-    margin-bottom: 68px;
+    margin-bottom: 160px;
 
     .IconWrapper {
       margin: 48px 0;
@@ -199,6 +201,7 @@
 
     @media screen and (max-width: 768px) {
       margin-top: 32px;
+      margin-bottom: 100px;
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
       grid-template-areas: "first" "second" "third";
@@ -231,6 +234,7 @@
 
   .InvestmentIconsContainerSecondary {
     @extend .InvestmentIconsContainer;
+    margin-bottom: 200px;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "first second third"
@@ -275,6 +279,7 @@
     }
 
     @media screen and (max-width: 768px) {
+      margin-bottom: 100px;
       grid-template-rows: auto auto auto;
       grid-template-columns: 1fr 1fr;
       grid-template-areas:

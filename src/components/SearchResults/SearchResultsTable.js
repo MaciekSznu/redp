@@ -60,7 +60,6 @@ class SearchResultsTable extends React.Component {
   };
 
   filterFlatsArray(props) {
-    // console.log(this.props);
     return this.state.flats.filter((el) => {
       return (
         el.floor <=
@@ -111,7 +110,7 @@ class SearchResultsTable extends React.Component {
             </td>
             <td style={this.setStatusColor(status)}>{this.translateStatus(status)}</td>
             <td className={styles.tableDataBalcony}>{this.isBalconyOrTerrace(balcony)}</td>
-            <td>{chart}</td>
+            <td className={styles.tableDataLink}>{chart}</td>
           </>
         );
       } else {

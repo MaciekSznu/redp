@@ -25,30 +25,45 @@
       background: url(../../assets/helpers/hexagon-pagination.svg);
       background-position: center center;
       background-repeat: no-repeat;
-
       color: $base-dark;
+      transition: background 0.5s ease-out;
 
-      // &:hover {
-      //   background-color: $color-5;
-      // }
+      &:hover {
+        background: url(../../assets/helpers/hexagon-pagination-hover.svg);
+      }
 
       &--active {
         background: url(../../assets/helpers/hexagon-pagination-active.svg);
         color: $white;
+
+        &:hover {
+          background: url(../../assets/helpers/hexagon-pagination-active.svg);
+        }
       }
       &--first {
         background: url(../../assets/helpers/page-prev.svg);
         background-position: center;
         background-repeat: no-repeat;
+
+        &:hover {
+          background: url(../../assets/helpers/page-prev.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+        }
       }
       &--last {
         background: url(../../assets/helpers/page-next.svg);
         background-position: center;
         background-repeat: no-repeat;
+
+        &:hover {
+          background: url(../../assets/helpers/page-next.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+        }
       }
     }
     @media screen and (max-width: 768px) {
-
       font-size: 16px;
       &__item {
         width: 40px;
