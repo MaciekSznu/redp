@@ -278,7 +278,7 @@
         &:before {
           position: absolute;
           content: "";
-          border: 2px solid $dark-grey;
+          background: $dark-grey;
           top: 36px;
           left: 0;
           width: 100%;
@@ -298,6 +298,7 @@
           display: flex;
           width: 100%;
           justify-content: center;
+          outline: none;
 
           .LocationAttributesIcon {
             z-index: 2;

@@ -67,9 +67,9 @@ const ContactView = () => {
                 </button>
               </div>
               <div className={styles.PhoneFormSectionSecond}>
-                <input className={styles.PhoneFormCheckbox} type="checkbox" id="rodo" name="rodo" />
-                <div className={styles.PhoneFormCustomCheckbox}></div>
-                <label className={styles.PhoneFormCheckboxLabel} htmlFor="rodo">
+                <input className={styles.rodoCheckbox} type="checkbox" id="rodo" name="rodo" />
+                <div className={styles.rodoCustomCheckbox}></div>
+                <label className={styles.rodoCheckboxLabel} htmlFor="rodo">
                   Wyrażam zgodę na przetwarzanie moich danych osobowych w celu przedstawienia oferty marketingowej
                   nieruchomości za pośrednictwem połączenia telefonicznego przez Real Estate Sp. z o.o.
                 </label>

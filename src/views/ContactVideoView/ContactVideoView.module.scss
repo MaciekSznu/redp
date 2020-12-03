@@ -161,39 +161,7 @@
             position: relative;
             margin-bottom: 56px;
 
-            .rodoCheckbox {
-              position: absolute;
-              opacity: 0;
-              cursor: pointer;
-              height: 0;
-              width: 0;
-            }
-
-            .rodoCustomCheckbox {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 24px;
-              height: 24px;
-              margin-right: 14px;
-              border: 2px solid rgba(54, 72, 89, 0.1);
-              border-radius: 1px;
-              cursor: pointer;
-            }
-
-            .rodoCheckboxLabel {
-              padding-left: 38px;
-              font-size: 14px;
-              line-height: 21px;
-              font-weight: 300;
-              letter-spacing: $small-letter-spacing;
-              z-index: 2;
-              cursor: pointer;
-            }
-
-            & .rodoCheckbox:checked ~ .rodoCustomCheckbox {
-              background: $base-green;
-            }
+            @include rodo-checkbox;
           }
           .formButton {
             width: 100%;

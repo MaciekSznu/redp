@@ -25,6 +25,12 @@
           letter-spacing: $small-letter-spacing;
           background-color: $light-green;
           border: 3px solid $light-green;
+          &:first-of-type {
+            padding-left: 32px;
+          }
+          &:last-of-type {
+            padding-right: 32px;
+          }
         }
       }
 
@@ -38,7 +44,13 @@
           color: $base-dark;
           font-family: $base-font;
           font-weight: 400;
-          font-size: 18px;
+          font-size: 17px;
+          &:first-of-type {
+            padding-left: 32px;
+          }
+          &:last-of-type {
+            padding-right: 32px;
+          }
         }
 
         .tableDataStatus {
