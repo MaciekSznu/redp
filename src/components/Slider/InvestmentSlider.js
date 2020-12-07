@@ -25,20 +25,22 @@ class InvestmentSlider extends React.Component {
     };
 
     return (
-      <Slider {...settings}>
-        <div>
-          <img src={Slide_01} alt="Slide_01" />
-        </div>
-        <div>
-          <img src={Slide_02} alt="Slide_02" />
-        </div>
-        <div>
-          <img src={Slide_03} alt="Slide_03" />
-        </div>
-        <div>
-          <img src={Slide_04} alt="Slide_04" />
-        </div>
-      </Slider>
+      <div className="slider-wrapper">
+        <Slider {...settings}>
+          <div>
+            <img src={Slide_01} alt="Slide_01" />
+          </div>
+          <div>
+            <img src={Slide_02} alt="Slide_02" />
+          </div>
+          <div>
+            <img src={Slide_03} alt="Slide_03" />
+          </div>
+          <div>
+            <img src={Slide_04} alt="Slide_04" />
+          </div>
+        </Slider>
+      </div>
     );
   }
 }

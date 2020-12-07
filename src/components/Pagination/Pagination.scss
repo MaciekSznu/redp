@@ -72,6 +72,19 @@
         background-size: contain;
         background-repeat: no-repeat;
 
+        &--active {
+          background: url(../../assets/helpers/hexagon-pagination-active-mobile.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          color: $white;
+
+          &:hover {
+            background: url(../../assets/helpers/hexagon-pagination-active-mobile.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+
         &--first {
           background-size: 75%;
         }

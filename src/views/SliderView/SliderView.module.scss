@@ -66,6 +66,7 @@
     grid-area: main-slider;
     width: 100%;
     height: auto;
+    min-height: 728px;
     max-height: 728px;
   }
 
@@ -124,10 +125,11 @@
       }
     }
 
-    .Slider {
+    .slider {
       margin-top: 24px;
       width: 100%;
-      height: auto;
+      height: calc(100vw * 0.7);
+      min-height: calc(100vw * 0.7);
       max-height: calc(100vw * 0.7);
       overflow: hidden;
     }
