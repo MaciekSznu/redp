@@ -110,6 +110,16 @@
         right: 63px;
         top: -2px;
       }
+
+      .CompanyLogo {
+        position: absolute;
+        right: 264px;
+        top: 50%;
+        z-index: 3;
+        transform-origin: center;
+        transform: translate(50%, -50%) scale(3);
+        opacity: 0.8;
+      }
     }
 
     @media screen and (max-width: 768px) {
@@ -156,6 +166,15 @@
           transform-origin: top right;
           z-index: 2;
           top: 0;
+        }
+
+        .CompanyLogo {
+          position: absolute;
+          right: 110px;
+          top: 50%;
+          z-index: 3;
+          transform-origin: center;
+          transform: translate(50%, -50%) scale(1.45);
         }
       }
     }
@@ -301,6 +320,15 @@
     z-index: 2;
   }
 
+  .CompanyLogo {
+    position: absolute;
+    right: 352px;
+    top: 50%;
+    z-index: 3;
+    transform-origin: center;
+    transform: translate(50%, -50%) scale(3);
+  }
+
   @media screen and (max-width: 768px) {
     margin: 24px 0 0;
     height: 104px;
@@ -339,6 +367,15 @@
       transform-origin: top right;
       z-index: 2;
       top: 0;
+    }
+
+    .CompanyLogo {
+      position: absolute;
+      right: 105px;
+      top: 50%;
+      z-index: 3;
+      transform-origin: center;
+      transform: translate(50%, -50%) scale(1.25);
     }
   }
 }

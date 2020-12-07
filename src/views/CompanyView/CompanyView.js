@@ -5,6 +5,7 @@ import { ReactComponent as HexagonSecondary } from "../../assets/icons/hexagon-s
 import { ReactComponent as HexagonsMask } from "../../assets/helpers/hexagons-mask.svg";
 import { ReactComponent as HexagonsMaskWhite } from "../../assets/helpers/hexagons-mask-white.svg";
 import { ReactComponent as QuaotationMark } from "../../assets/helpers/quotation-mark.svg";
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 
 const CompanyView = () => {
   return (
@@ -22,6 +23,7 @@ const CompanyView = () => {
             <p className={styles.AdditionalText}>lider z wizją i doświadczeniem</p>
           </div>
           <HexagonsMaskWhite className={styles.CompanyHexagons} />
+          <Logo className={styles.CompanyLogo} />
           <div className={styles.BannerRightContent}></div>
         </div>
         <div className={styles.ContentWrapperMid}>
@@ -61,6 +63,7 @@ const CompanyView = () => {
           </p>
           <div className={styles.CompanyImageWrapper}>
             <HexagonsMask className={styles.CompanyHexagons} />
+            <Logo className={styles.CompanyLogo} />
           </div>
         </div>
         <div className={styles.FullWidthBannerBottom}>

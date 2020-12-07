@@ -87,6 +87,15 @@
           right: 0;
           top: 50px;
         }
+
+        .CompanyLogo {
+          position: absolute;
+          right: 50%;
+          top: 50%;
+          z-index: 3;
+          transform-origin: center;
+          transform: translate(50%, -50%) scale(3);
+        }
       }
 
       &:nth-of-type(3) {
@@ -154,11 +163,9 @@
         grid-area: logo;
         background: $base-grey;
 
-        .LogoSubstitute {
-          transform: scale(1.25);
-          path {
-            fill: $base-green;
-          }
+        .CompanyLogo {
+          transform-origin: center;
+          transform: scale(1.2);
         }
       }
 

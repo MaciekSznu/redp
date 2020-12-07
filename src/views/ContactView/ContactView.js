@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./ContactView.module.scss";
 import { ReactComponent as CameraIcon } from "../../assets/icons/camera-icon.svg";
 import ContactTabsView from "../ContactTabsView/ContactTabsView";
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 
 const ContactView = () => {
   return (
@@ -19,7 +20,9 @@ const ContactView = () => {
           <div className={styles.ContactTabs}>
             <div className={styles.ContactTabAdress}>
               <div className={styles.ContactTabAdressLeft}>
-                <div className={styles.Logo}>logo</div>
+                <div className={styles.Logo}>
+                  <Logo className={styles.CompanyLogo} />
+                </div>
                 <p className={styles.AdressBold}>ul. Lipska 20/40</p>
                 <p className={styles.AdressStandard}>30-412 Kraków</p>
               </div>
