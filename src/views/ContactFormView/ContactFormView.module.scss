@@ -17,8 +17,7 @@
     }
 
     .contactFormWrapper {
-      margin-top: 64px;
-      margin-bottom: 64px;
+      margin: 64px 0;
       display: grid;
       grid-template-columns: auto 633px;
       grid-template-rows: auto;
@@ -26,9 +25,6 @@
 
       .contactData {
         grid-area: left;
-      }
-
-      .contactData {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -128,12 +124,49 @@
         .formButton {
           width: 100%;
           @include button-primary;
-          height: 58px;
-          line-height: 58px;
-          border-radius: 4px;
           font-size: 16px;
           font-weight: 700;
           padding: 0 16px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .contactFormSection {
+      .contactFormWrapper {
+        margin: 32px 0;
+        display: block;
+        padding: 0 20px;
+
+        .contactData {
+          display: none;
+        }
+
+        .contactForm {
+          .formLabel {
+            font-size: 12px;
+            margin: 16px 0 8px;
+          }
+
+          .formTextInput {
+            height: 42px;
+            padding: 8px 16px;
+            border: 1px solid rgba(54, 72, 89, 0.1);
+            border-radius: 2px;
+            font-size: 12px;
+            &::placeholder {
+              font-size: 12px;
+            }
+          }
+
+          .formTextArea {
+            height: 164px;
+          }
+
+          .sendSection {
+            margin-bottom: 32px;
+          }
         }
       }
     }
