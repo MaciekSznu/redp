@@ -3,11 +3,6 @@ import styles from "./FiltersView.module.scss";
 import RangeSearchInputs from "../FiltersView/SearchInputs/RangeSearchInputs";
 import SearchResultsTable from "../../components/SearchResults/SearchResultsTable";
 import { floorRange, roomsRange, areaRange, priceRange } from "../../components/Ranges/RangesData";
-
-// import FlatsSlider from '../../components/Sliders/FlatsSlider';
-// import Fade from 'react-reveal/Fade';
-// import GraphicSearch from '../../components/GraphicSearch/GraphicSearch';
-
 class FiltersView extends React.Component {
   state = {
     filters: {

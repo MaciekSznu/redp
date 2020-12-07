@@ -17,8 +17,10 @@ class FloorRangeContainer extends React.Component {
         maxValue={this.state.maxValue}
         value={this.state.value}
         step={this.state.step}
-        onChange={(value) => this.setState({ value })}
-        onChangeComplete={(value) => this.props.onFloorChange({ floor: value })}
+        onChange={(value) => {
+          this.setState({ value });
+          this.props.onFloorChange({ floor: value });
+        }}
         allowSameValues={true}
       />
     );
