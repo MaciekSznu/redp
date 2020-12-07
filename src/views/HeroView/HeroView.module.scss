@@ -30,11 +30,6 @@
     position: absolute;
     top: 250px;
     left: 102px;
-    height: 58px;
-    line-height: 26px;
-    font-size: 18px;
-    border-radius: 4px;
-    padding: 16px 24px;
   }
 
   .PatternLeft,
@@ -56,7 +51,7 @@
     margin-top: 60px;
 
     .heroImageText {
-      top: 100px;
+      top: 40px;
       left: 40px;
       color: $white;
     }
@@ -67,7 +62,7 @@
     .heroButton {
       @include button-primary;
       position: absolute;
-      top: 180px;
+      top: 120px;
       left: 40px;
 
       &:hover {
