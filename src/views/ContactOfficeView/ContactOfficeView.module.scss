@@ -99,4 +99,16 @@
       z-index: 2;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .sectionSubTitle {
+      display: none;
+    }
+    .sectionParagraph {
+      display: none;
+    }
+    .salesOfficeBanner {
+      display: none;
+    }
+  }
 }
