@@ -136,7 +136,6 @@
 
   .InvestmentSectionTitle {
     @include section-sub-title;
-    // margin-top: 92px;
     margin-bottom: 56px;
   }
 
@@ -176,18 +175,10 @@
       .IconTitle {
         margin-top: 48px;
         font-size: 20px;
-        color: $base-green;
+        color: $base-dark;
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: $medium-letter-spacing;
-      }
-
-      .IconSubTitle {
-        margin-top: 0;
-        font-size: 20px;
-        color: $base-dark;
-        font-weight: 500;
-        letter-spacing: $small-letter-spacing;
       }
 
       &:nth-of-type(2) {
@@ -454,7 +445,7 @@
       .scheduleSeeMoreSummary {
         display: flex;
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
 
         .scheduleButton {
           @include button-secondary;
