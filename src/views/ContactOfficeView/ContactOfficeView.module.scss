@@ -2,13 +2,15 @@
 @import "../../mixins.scss";
 
 .contactOfficeWrapper {
-  grid-area: hero;
-
   .sectionSubTitle {
     @include section-sub-title;
     font-size: 32px;
     margin: 64px 0 24px;
     text-align: left;
+  }
+
+  .sectionParagraph {
+    @include base-paragraph;
   }
 
   .salesOfficeBanner {

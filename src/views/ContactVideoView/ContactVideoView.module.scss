@@ -2,8 +2,6 @@
 @import "../../mixins.scss";
 
 .videoPageWrapper {
-  grid-area: hero;
-
   .videoContactWrapper {
     .sectionSubTitle {
       @include section-sub-title;
