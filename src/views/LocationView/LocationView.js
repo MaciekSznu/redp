@@ -12,6 +12,7 @@ import { ReactComponent as GymIcon } from "../../assets/icons/gym-icon.svg";
 import { ReactComponent as DoctorIcon } from "../../assets/icons/doctor-icon.svg";
 import { ReactComponent as EducationIcon } from "../../assets/icons/education-icon.svg";
 import { ReactComponent as HexagonSeeMore } from "../../assets/helpers/hexagon-see-more.svg";
+import { ReactComponent as Mapa } from "../../assets/helpers/mapa.svg";
 
 const LocationView = () => {
   return (
@@ -38,7 +39,7 @@ const LocationView = () => {
         </div>
         <div className={styles.FullWidthMapWrapper}>
           <h3 className={styles.LocationSubTitle}>poznaj okolicę</h3>
-          <div className={styles.FullWidthMap}></div>
+          <Mapa className={styles.FullWidthMap} />
           <div className={styles.ButtonWrapper}>
             <a
               href="https://www.google.pl/maps/place/50%C2%B002'03.5%22N+19%C2%B053'56.2%22E/@50.034309,19.8967557,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d50.0342981!4d19.8989312"

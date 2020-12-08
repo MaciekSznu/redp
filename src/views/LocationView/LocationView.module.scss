@@ -120,7 +120,8 @@
     .FullWidthMap {
       grid-area: map;
       height: 492px;
-      background: url(../../assets/images/mapa.jpg);
+      width: 100%;
+      margin-bottom: 32px;
     }
 
     .ButtonWrapper {

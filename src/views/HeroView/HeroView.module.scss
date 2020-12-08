@@ -48,12 +48,14 @@
 
   @media screen and (max-width: 768px) {
     background: url(../../assets/images/hero_667_500.jpg);
+    background-size: cover;
     margin-top: 60px;
 
     .heroImageText {
       top: 40px;
       left: 40px;
       color: $white;
+      margin-top: 0;
     }
 
     .heroImageAdditionalText {
@@ -62,7 +64,7 @@
     .heroButton {
       @include button-primary;
       position: absolute;
-      top: 120px;
+      top: 100px;
       left: 40px;
 
       &:hover {
