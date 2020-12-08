@@ -8,20 +8,32 @@
   background-color: $white;
   display: grid;
   grid-template-columns: 1042px;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
     "icons"
-    "tabs"
     "office"
-    "phone-form";
+    "office_01"
+    "phone-form"
+    "form"
+    "video";
 
   .contactTabsView {
     grid-area: icons;
   }
 
-  .ContentWrapperBottom {
+  .contactOfficeView {
     grid-area: office;
+  }
+  .contactFormView {
+    grid-area: form;
+  }
+  .contactVideoView {
+    grid-area: video;
+  }
+
+  .ContentWrapperBottom {
+    grid-area: office_01;
 
     .ContactParagraph {
       @include base-paragraph;

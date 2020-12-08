@@ -2,8 +2,6 @@
 @import "../../mixins.scss";
 
 .contactPageWrapper {
-  grid-area: hero;
-
   .contactFormSection {
     .sectionSubTitle {
       @include section-sub-title;

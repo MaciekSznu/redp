@@ -10,7 +10,7 @@ import VideoCalendar from "../../components/VideoCalendar/VideoCalendar";
 const ContactVideoView = () => {
   return (
     <article className={styles.videoPageWrapper}>
-      <section className={styles.videoContactWrapper}>
+      <section className={styles.videoContactWrapper} id="formularz-video">
         <h2 className={styles.sectionSubTitle}>umów się na prezentację mieszkania</h2>
         <p className={styles.sectionParagraph}>
           W trosce o wygodę naszych klientów oferujemy możliwość wirtualnego spotkania z naszym doradcą. Zajrzyj do
