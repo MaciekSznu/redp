@@ -4,7 +4,7 @@ import styles from "./TopMenu.module.scss";
 import Hamburger from "./TopMenuHamburger";
 import TopMenuItems from "./TopMenuItems";
 import SocialMenuBanner from "../SocialMenuBanner/SocialMenuBanner";
-import { ReactComponent as HexagonLogoWrapper } from "../../assets/helpers/hexagon-logo-wrapper.svg";
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 import { ReactComponent as MobileMenuPattern } from "../../assets/helpers/mobile-menu-pattern.svg";
 
 class TopMenu extends React.Component {
@@ -50,7 +50,7 @@ class TopMenu extends React.Component {
 
     return (
       <>
-        <HexagonLogoWrapper className={styles.hexagonLogoWrapper} />
+        <Logo className={styles.logo} />
         {mobileMenuHidden && (
           <div className={styles.hamburgerWrapper}>
             <Hamburger

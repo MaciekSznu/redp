@@ -3,7 +3,7 @@
 .topMenuItem {
   display: block;
   height: 26px;
-  margin: 16px 0;
+  // margin: 16px 0;
   cursor: pointer;
   text-align: center;
   color: $base-dark;
@@ -16,8 +16,8 @@
 
 @media (min-width: 768px) {
   .topMenuItem {
-    height: 51px;
-    line-height: 51px;
+    height: 60px;
+    line-height: 60px;
     font-size: 16px;
     padding: 0 32px;
     color: $base-dark;
